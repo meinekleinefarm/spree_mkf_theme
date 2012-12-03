@@ -1,0 +1,16 @@
+footer#footer {
+  color: #DBCBA2;
+  background-image: url('footer.png');
+  background-repeat: repeat-x;
+  background-position: center center;
+
+  a {
+    color: #DBCBA2;
+
+    &:hover, &:visited {
+      color: #DBCBA2;
+    }
+
+
+  }
+}
