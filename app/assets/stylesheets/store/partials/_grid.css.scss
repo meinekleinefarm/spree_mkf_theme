@@ -1,0 +1,37 @@
+.one {
+  @include makeColumn(1)
+}
+.two {
+  @include makeColumn(2)
+}
+.three {
+  @include makeColumn(3)
+}
+.four {
+  @include makeColumn(4)
+}
+.five {
+  @include makeColumn(5)
+}
+.six {
+  @include makeColumn(6)
+}
+.seven {
+  @include makeColumn(7)
+}
+.eight {
+  @include makeColumn(8)
+}
+.nine {
+  @include makeColumn(9)
+}
+.ten {
+  @include makeColumn(10)
+}
+.eleven {
+  @include makeColumn(11)
+}
+.twelve {
+  @include makeColumn(12)
+}
+
