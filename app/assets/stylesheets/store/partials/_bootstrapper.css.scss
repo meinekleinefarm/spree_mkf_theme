@@ -2,17 +2,19 @@ $btnPrimaryBackground: #f00;
 $textColor: #452500;
 $linkColor: #CC766A;
 $linkColorHover: #CC766A;
-$baseFontSize: 16px;
+$baseFontSize: 18px;
+$sansFontFamily: 'Yanone Kaffeesatz';
 
 $gridColumns: 16;
-$gridColumnWidth: 45px;
-$gridGutterWidth: 15px;
 
 $gridColumnWidth1200: 55px;
 $gridGutterWidth1200: 20px;
 
-$gridColumnWidth768: 35px;
-$gridGutterWidth768: 13px;
+$gridColumnWidth:     45px;
+$gridGutterWidth:     15px;
+
+$gridColumnWidth768:  35px;
+$gridGutterWidth768:  13px;
 
 @import "bootstrap";
 @import "bootstrap-responsive";

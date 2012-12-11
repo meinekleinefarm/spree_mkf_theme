@@ -34,4 +34,15 @@
 .twelve {
   @include makeColumn(12)
 }
-
+.thirteen {
+  @include makeColumn(13)
+}
+.fourteen {
+  @include makeColumn(14)
+}
+.fifteen {
+  @include makeColumn(15)
+}
+.sixteen {
+  @include makeColumn(16)
+}

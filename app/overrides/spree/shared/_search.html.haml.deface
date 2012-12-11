@@ -1,0 +1,5 @@
+/
+  replace "code[erb-loud]:contains('form_tag')"
+= form_tag products_path, :method => :get, :class => "form-search" do
+
+
