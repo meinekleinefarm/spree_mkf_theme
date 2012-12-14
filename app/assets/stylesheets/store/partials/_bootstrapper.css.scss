@@ -1,3 +1,5 @@
+$pink: #CC766A;
+
 $btnPrimaryBackground: #f00;
 $textColor: #452500;
 $linkColor: #CC766A;
@@ -16,5 +18,22 @@ $gridGutterWidth:     15px;
 $gridColumnWidth768:  35px;
 $gridGutterWidth768:  13px;
 
+$navbarBackgroundHighlight: #452500;
+$navbarBackground: darken($navbarBackgroundHighlight, 5);
+
+$navbarText: #FFD807;
+$navbarLinkColor: #FFD807;
+$navbarLinkColorHover: lighten($navbarLinkColor,5);
+$navbarLinkColorActive: lighten($navbarLinkColor,5);
+
+$navbarSearchBackground: #CC766A;
+
+$inputBorder: #868683;
+$navbarSearchBorder: #868683;
+
 @import "bootstrap";
 @import "bootstrap-responsive";
+
+.btn {
+  @include buttonBackground(#FFD5CA, #FCA09A, #452500)
+}
