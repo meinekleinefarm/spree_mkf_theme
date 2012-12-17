@@ -1,9 +1,15 @@
-$pink: #CC766A;
+$pink: #DD8888;
+$brown: #452500;
+$yellow: #F9CB05;
+$grey: #666666;
+$black: #000000;
+$beige: #F2EEE0;
+
 
 $btnPrimaryBackground: #f00;
-$textColor: #452500;
-$linkColor: #CC766A;
-$linkColorHover: #CC766A;
+$textColor: $brown;
+$linkColor: $pink;
+$linkColorHover: $pink;
 $baseFontSize: 18px;
 $sansFontFamily: 'Yanone Kaffeesatz';
 
@@ -18,11 +24,11 @@ $gridGutterWidth:     15px;
 $gridColumnWidth768:  35px;
 $gridGutterWidth768:  13px;
 
-$navbarBackgroundHighlight: #452500;
-$navbarBackground: darken($navbarBackgroundHighlight, 5);
+$navbarBackgroundHighlight: rgba(0,0,0,0);
+$navbarBackground: rgba(0,0,0,0);
 
-$navbarText: #FFD807;
-$navbarLinkColor: #FFD807;
+$navbarText: $yellow;
+$navbarLinkColor: $yellow;
 $navbarLinkColorHover: lighten($navbarLinkColor,5);
 $navbarLinkColorActive: lighten($navbarLinkColor,5);
 

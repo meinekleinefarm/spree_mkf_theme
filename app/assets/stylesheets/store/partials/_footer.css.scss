@@ -4,6 +4,10 @@ footer#footer {
   background-repeat: repeat-x;
   background-position: center center;
 
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+
   a, a:hover, &:visited {
     color: #DBCBA2;
   }

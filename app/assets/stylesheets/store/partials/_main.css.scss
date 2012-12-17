@@ -6,13 +6,19 @@
 }
 
 html {
-  background-color: #F2EEE0;
-
+  background: $beige url('texture_white.jpg') top left;
   font-family: 'Yanone Kaffeesatz';
+  height: 100%;
 }
 
 body {
   background: transparent;
-
+  height: 100%;
 }
 
+#wrapper {
+  .container {
+    background: $beige;
+
+  }
+}
