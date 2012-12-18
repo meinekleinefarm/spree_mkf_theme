@@ -3,10 +3,12 @@ footer#footer {
   background-image: url('footer.jpg');
   background-repeat: repeat-x;
   background-position: center center;
-
-  position: fixed;
-  bottom: 0px;
   width: 100%;
+
+  @include box-shadow(0 0 20px $shadow);
+
+  position: relative;
+  z-index: 1;
 
   a, a:hover, &:visited {
     color: #DBCBA2;

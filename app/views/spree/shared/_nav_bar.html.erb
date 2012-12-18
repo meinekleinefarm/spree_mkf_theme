@@ -5,12 +5,19 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </a>
-    <a class="brand" href="/">Meine kleine Farm</a>
+    <a class="brand" href="/">
+      <%= image_tag 'store/header-logo.png' %>
+    </a>
     <div class="nav-collapse">
       <ul id="nav-bar" class="inline" data-hook>
         <li id="search-bar" data-hook></li>
       </ul>
-      <%= render :partial => 'spree/shared/search' %>
+      <div id="social" class="pull-right">
+        <a href="http://www.facebook.com/meinekleinefarm" class="icon icon-facebook" target="_blank">Facebook</a>
+        <a href="http://twitter.com/#!/meatonamission"    class="icon icon-twitter" target="_blank">Twitter</a>
+        <a href="http://pinterest.com/meinekleinefarm" class="icon icon-pinterest" target="_blank">Pinterest</a>
+        <a href="/kontakt" class="icon icon-mail">Mail</a>
+      </div>
     </div>
   </div>
 </nav>

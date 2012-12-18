@@ -1,3 +1,23 @@
 ul#products {
   list-style-type: none;
+
+  .product {
+    margin-left: 20px;
+
+    img.divider {
+      text-align: center;
+      width: 80%;
+    }
+  }
+
+  .product-image {
+    a {
+      @extend .thumbnail;
+      background-color: white;
+
+      img {
+        width: 260px;
+      }
+    }
+  }
 }

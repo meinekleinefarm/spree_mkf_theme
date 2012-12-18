@@ -1,6 +1,8 @@
 header {
   background: $brown url('header_back.jpg') top center ;
-  height: 150px;
+  @include box-shadow(0 0 20px $shadow);
+  position: relative;
+  z-index: 1000;
 }
 
 #main-nav-bar {
@@ -11,6 +13,37 @@ header {
     a {
       color: $grey;
     }
+
+  }
+}
+
+#social {
+
+  width: 30px;
+  padding: 10px 20px 10px;
+
+  .icon {
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+
+    &.icon-facebook {
+      background: url('icons/facebook.png') top left no-repeat;
+    }
+
+    &.icon-twitter {
+      background: url('icons/twitter.png') top left no-repeat;
+    }
+
+    &.icon-pinterest {
+      background: url('icons/pinterest.png') top left no-repeat;
+    }
+
+    &.icon-mail {
+      background: url('icons/mail.png') top left no-repeat;
+    }
+
+
 
   }
 }

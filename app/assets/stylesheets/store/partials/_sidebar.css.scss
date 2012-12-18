@@ -1,5 +1,27 @@
 aside {
   .filter_choices, .taxons-list {
     list-style-type: none;
+    list-style-position: outside;
+
+    margin: 0 0 10px 10px;
+
+    li:before{
+      content:"\00BB\00A0";
+    }
+  }
+
+  div[data-hook="homepage_sidebar_navigation"] {
+    padding: 30px;
+    background: url('sidebar-box-large-bg.png') top left no-repeat;
+  }
+}
+
+#taxonomies {
+  h6 {
+    font-size: 120%;
+  }
+
+  a {
+    color: $brown;
   }
 }
