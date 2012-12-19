@@ -1,4 +1,5 @@
 aside {
+
   .filter_choices, .taxons-list {
     list-style-type: none;
     list-style-position: outside;
@@ -10,9 +11,17 @@ aside {
     }
   }
 
-  div[data-hook="homepage_sidebar_navigation"] {
+  div[data-hook="homepage_sidebar_navigation"], div[data-hook="taxon_sidebar_navigation"] {
     padding: 30px;
-    background: url('sidebar-box-large-bg.png') top left no-repeat;
+    background: $greyblue url('sidebar-texture.jpg') top left;
+    border: solid;
+    border-color: $grey;
+    border-width: 3px 3px 3px 3px;
+    -moz-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    -webkit-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    -o-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    margin: 0px 10px 10px;
   }
 }
 
