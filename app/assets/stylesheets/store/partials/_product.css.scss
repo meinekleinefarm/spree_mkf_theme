@@ -2,8 +2,6 @@ ul#products {
   list-style-type: none;
 
   .product {
-    margin-left: 10px;
-    margin-right: 10px;
 
     img.divider {
       text-align: center;
@@ -11,14 +9,13 @@ ul#products {
     }
   }
 
-  .product-image {
+  div.product-image {
+
+    border: 1px solid lighten($grey, 30);
     a {
-      @extend .thumbnail;
       background-color: white;
 
-      img {
-        width: 260px;
-      }
     }
   }
 }
+

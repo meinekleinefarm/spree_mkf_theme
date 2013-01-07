@@ -1,2 +1,0 @@
-set_attributes '#top-nav-bar'
-attributes :class => "navbar columns omega ten"

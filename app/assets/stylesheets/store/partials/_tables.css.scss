@@ -1,3 +1,13 @@
-tr.even {
-  background: #DDD;
+table#product-properties {
+  border-color:lighten($grey, 30);
+
+  tr {
+    border-bottom-color:lighten($grey, 30);
+  }
+}
+
+tr {
+  &.even {
+    background: #DDD;
+  }
 }

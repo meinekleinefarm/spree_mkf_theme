@@ -1,19 +1,20 @@
 header {
-  background: $brown url('header_back.jpg') top center ;
-  @include box-shadow(0 0 20px $shadow);
+  @include box-shadow(0 0 30px $shadow);
   position: relative;
   z-index: 1000;
+  background: $beige url('header_back.jpg') top center;
+
+  &#header {
+    margin: 0;
+  }
+
 }
 
-#main-nav-bar {
-  li {
-    display: inline;
-    padding-right: 20px;
+ul#main-nav-bar {
+  border: 0px;
 
-    a {
-      color: $grey;
-    }
-
+  li a{
+    color: $grey;
   }
 }
 

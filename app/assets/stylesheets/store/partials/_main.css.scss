@@ -1,38 +1,28 @@
-@font-face {
-  font-family: 'Yanone Kaffeesatz';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url(http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/YDAoLskQQ5MOAgvHUQCcLQa6gm6bS00u2Qn-iPLo1Go.woff) format('woff');
-}
 
 html {
-  background: $beige url('texture_white.jpg') top left;
-  font-family: 'Yanone Kaffeesatz';
 }
 
 body {
-  background: transparent;
+  background: $beige url('texture_white.jpg') top left;
+  font-family: 'Yanone Kaffeesatz';
+
 }
 
 #wrapper {
 
   position: relative;
   z-index: 100;
-
-  .container{
-    min-height: 600px;
-    @include box-shadow(0 0 20px $shadow);
-    padding-top: 15px;
+  margin-bottom: 0px;
+  .container {
+    background: $beige;
+    border: solid;
+    border-color: $brown;
+    border-width: 0px 3px 0px 3px;
+    -moz-border-image: url(border.png) 3 3 3 3 repeat;
+    -webkit-border-image: url(border.png) 3 3 3 3 repeat;
+    -o-border-image: url(border.png) 3 3 3 3 repeat;
+    border-image: url(border.png) 3 3 3 3 fill repeat;
+    @include box-shadow(0 0 30px $shadow);
+    padding: 20px 10px;
   }
-}
-
-#wrapper .container, #store_menu {
-  background: $beige;
-  border: solid;
-  border-color: $brown;
-  border-width: 0px 3px 0px 3px;
-  -moz-border-image: url(border.png) 3 3 3 3 repeat;
-  -webkit-border-image: url(border.png) 3 3 3 3 repeat;
-  -o-border-image: url(border.png) 3 3 3 3 repeat;
-  border-image: url(border.png) 3 3 3 3 fill repeat;
 }
