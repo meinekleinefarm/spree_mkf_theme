@@ -1,6 +1,38 @@
 aside {
 
+  margin-bottom: 10px;
+
+  #sidebar_wrapper {
+    background: $greyblue url('sidebar-texture.jpg') top left;
+    border: solid;
+    border-color: $grey;
+    border-width: 3px 3px 3px 3px;
+    -moz-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    -webkit-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    -o-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+
+  }
+
+  form {
+    input#keywords {
+      width: 63%;
+      margin: 10px;
+      border: solid;
+      border-color: $brown;
+      border-width: 3px 3px 3px 3px;
+      -moz-border-image: url(border.png) 3 3 3 3 repeat;
+      -webkit-border-image: url(border.png) 3 3 3 3 repeat;
+      -o-border-image: url(border.png) 3 3 3 3 repeat;
+      border-image: url(border.png) 3 3 3 3 fill repeat;
+      padding: 2% 20% 2% 5%;
+      background: white url(search-btn-lupe.png) 99% center no-repeat;
+    }
+  }
+
   .filter_choices, .taxons-list {
+
+    font-family: $ff_regular;
     list-style-type: none;
     list-style-position: outside;
 
@@ -13,20 +45,35 @@ aside {
 
   div[data-hook="homepage_sidebar_navigation"], div[data-hook="taxon_sidebar_navigation"] {
     padding: 30px;
-    background: $greyblue url('sidebar-texture.jpg') top left;
-    border: solid;
-    border-color: $grey;
-    border-width: 3px 3px 3px 3px;
-    -moz-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
-    -webkit-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
-    -o-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
-    border-image: url(sidebar-border.png) 3 3 3 3 repeat;
   }
 }
 
-#taxonomies {
-  h6 {
+#sidebar_products_search {
+  h6.filter-title {
     font-size: 120%;
+    font-family: $ff_base;
+
+    border: solid;
+    border-color: $brown;
+    -moz-border-image: url(border.png) 0 0 3 0 repeat;
+    -webkit-border-image: url(border.png) 0 0 3 0 repeat;
+    -o-border-image: url(border.png) 0 0 3 0 repeat;
+    border-image: url(border.png) 0 0 3 0 fill repeat;
+    color: $brown;
+  }
+}
+
+nav#taxonomies {
+  h6.taxonomy-root {
+    font-size: 120%;
+    font-family: $ff_base;
+    border: solid;
+    border-color: $brown;
+    -moz-border-image: url(border.png) 0 0 3 0 repeat;
+    -webkit-border-image: url(border.png) 0 0 3 0 repeat;
+    -o-border-image: url(border.png) 0 0 3 0 repeat;
+    border-image: url(border.png) 0 0 3 0 fill repeat;
+
   }
 
   a {

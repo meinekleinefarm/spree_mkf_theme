@@ -37,20 +37,21 @@ $product_link_text_color:   $pink;
 /* Font families
 /*--------------------------------------*/
 $ff_base:       'Yanone Kaffeesatz', sans-serif !default;
+$ff_regular:    'Tahoma', sans-serif !default;
 
 /*--------------------------------------
   | Font sizes
   |--------------------------------------
   |- Navigation
   |                                    */
-      $header_navigation_font_size:           18px !default;
-      $horizontal_navigation_font_size:       20px !default;
-      $main_navigation_header_font_size:      18px !default;
-      $main_navigation_font_size:             16px !default;
+      $header_navigation_font_size:           18px !default; // Header Schrift
+      $horizontal_navigation_font_size:       16px !default; // Main Nav-bar unter Header
+      $main_navigation_header_font_size:      18px !default; // Überschriften in der Sidebar
+      $main_navigation_font_size:             16px !default; // Listenelemente in der Sidebar
 /*|------------------------------------
   |- Product Listing
   |                                  */
-      $product_list_name_font_size:           16px !default;
+      $product_list_name_font_size:           16px !default; // Schrift unter Produkt Bild
       $product_list_price_font_size:          20px !default;
       $product_list_header_font_size:         24px !default;
       $product_list_search_font_size:         18px !default;
@@ -69,6 +70,6 @@ $ff_base:       'Yanone Kaffeesatz', sans-serif !default;
       $button_font_size:                      16px !default;
       $input_box_font_size:                   17px !default;
       $base_font_size:                        16px !default;
-      $border_color:                          lighten($body_text_color, 60);
-      $default_border:                        0px solid $border_color;
+      $border_color:                          white;
+      $default_border:                        1px solid $border_color;
       $button_border_color:                   rgba(0, 138, 189, .75) !default;
