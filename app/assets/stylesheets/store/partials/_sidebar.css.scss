@@ -14,7 +14,13 @@ aside {
 
   }
 
-  form {
+  form#search_form {
+
+    background-image: url(staples.png);
+    background-position: center 10px;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+
     input#keywords {
       width: 63%;
       margin: 10px;
@@ -44,7 +50,7 @@ aside {
   }
 
   div[data-hook="homepage_sidebar_navigation"], div[data-hook="taxon_sidebar_navigation"] {
-    padding: 30px;
+    padding: 10px;
   }
 }
 
