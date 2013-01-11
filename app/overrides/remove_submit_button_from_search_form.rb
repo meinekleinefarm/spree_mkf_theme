@@ -4,4 +4,4 @@ Deface::Override.new(:virtual_path => 'spree/shared/_search',
                      :sequence => {
                        :after => 'add_search_form_as_first_child_of_sidebar'
                      },
-                     :original => '2b2e69dc9439fb20b16ad85788ad4ec57692db68' )
+                     :original => '6f93bdeb574c6958115df9e610169b19f31fc681')

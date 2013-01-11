@@ -2,4 +2,4 @@ Deface::Override.new(:virtual_path => 'spree/shared/_header',
                     :name => 'surround_header_content_with_container',
                     :surround_contents => 'header#header',
                     :erb => '<div class="container"><%= render_original %></div>',
-                    :original => 'd1fc4156cbab1ac52f706094ef49c096c6cc99c6')
+                    :original => 'e52417595430da0b4961a298c71181484cd8beeb')
