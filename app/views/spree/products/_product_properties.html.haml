@@ -1,0 +1,14 @@
+- require 'uri'
+%p
+  %span.left
+    Gewicht:
+    = @product.weight
+    |
+    Preis:
+    = number_to_currency @product.price
+  %span.right
+    - uri = URI.parse('http://pinterest.com/pin/create/button/')
+    - uri.query = {:url => request.url, :media => @product.images.first.attachment.url(:original), :description => "Meine kleine Farm: #{@product.name}"}.to_param
+    = link_to uri.to_s, :class => "pin-it-button", :'count-layout' => "horizontal" do
+      = image_tag "//assets.pinterest.com/images/PinExt.png", :border => "0", :title => "Pin It"
+    Kundenmeinungen(12)

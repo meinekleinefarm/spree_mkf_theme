@@ -53,3 +53,13 @@ body {
   @include box-shadow(0 0 30px $shadow);
   padding: 0px 0px 10px;
 }
+
+.right {
+  text-align: right;
+  float: right;
+}
+
+.left {
+  text-align: left;
+  float: left;
+}
