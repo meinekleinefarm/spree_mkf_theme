@@ -3,13 +3,13 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_mkf_theme'
   s.version     = '1.2.2'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Spree commerce theme for meinekleinefarm.org'
+  s.description = 'Spree commerce theme for meinekleinefarm.org'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.author    = 'Christoph Bünte'
+  s.email     = 'cb@meinekleinefarm.org'
+  s.homepage  = 'http://www.meinekleinefarm.org'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
