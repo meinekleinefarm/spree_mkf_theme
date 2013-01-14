@@ -1,0 +1,5 @@
+- unless @product.weight.blank?
+  %span.weight
+    %b Gewicht:
+    = number_with_delimiter(@product.weight)
+    g

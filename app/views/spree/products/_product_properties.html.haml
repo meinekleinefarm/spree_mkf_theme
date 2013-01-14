@@ -1,11 +1,8 @@
-- require 'uri'
 %p
   %span.left
-    Gewicht:
-    = @product.weight
+    = render :partial => 'weight'
     |
-    Preis:
-    = number_to_currency @product.price
+    = render :partial => 'price'
   %span.right
     - uri = URI.parse('http://pinterest.com/pin/create/button/')
     - uri.query = {:url => request.url, :media => @product.images.first.attachment.url(:original), :description => "Meine kleine Farm: #{@product.name}"}.to_param
