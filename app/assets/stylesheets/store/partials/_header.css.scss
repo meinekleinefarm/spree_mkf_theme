@@ -18,9 +18,16 @@ ul#main-nav-bar {
   border: 0px;
   text-align: center;
 
-  li a{
+  li a, li#link-to-cart a{
+    font-weight: normal;
     color: $grey;
+
+    span.amount {
+      border-color: $grey;
+      font-weight: normal;
+    }
   }
+
 }
 
 #social {
