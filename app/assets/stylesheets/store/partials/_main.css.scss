@@ -71,7 +71,7 @@ body {
   float: left;
 }
 
-::selection, ::-moz-selection{
+::selection, ::-moz-selection, ::-webkit-selection {
   background: darken($beige, 5);
   color: $grey;
   text-shadow: none;
