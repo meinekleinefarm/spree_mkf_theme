@@ -2,6 +2,10 @@
   .row[data-hook="checkout_header"] {
     border-bottom: 1px solid $brown;
   }
+
+  h1 {
+    padding-top: 9px;
+  }
 }
 
 ol.progress-steps{
@@ -10,19 +14,27 @@ ol.progress-steps{
     text-transform: none;
     padding-right: 0px;
     margin-right: 0px;
+    padding-top: 20px;
 
     &.current-first {
       background-color: inherit;
       color: inherit;
       background-image: none;
-      span {
-        text-decoration: underline;
-      }
-
     }
 
     &.completed, &.completed-first, &.completed-last {
       color: $brown;
+      span{
+        &:after {
+          content: "\2713";
+          position: relative;
+          bottom: 20px;
+          right: 30%;
+          text-decoration: none;
+          color: $pink;
+          font-size: 20px;
+        }
+      }
     }
 
     &:after {
