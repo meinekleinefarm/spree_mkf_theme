@@ -1,3 +1,4 @@
 Deface::Override.new(:virtual_path => 'spree/orders/edit',
                      :name => 'remove_clear_cart_button',
-                     :remove => "#clear_cart_link code[erb-loud]:contains('submit_tag')")
+                     :replace_contents => "p#clear_cart_link",
+                     :erb => "<%= link_to t(:continue_shopping), products_path, :class => 'continue button gray' %>")

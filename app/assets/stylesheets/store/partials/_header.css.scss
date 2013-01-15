@@ -13,9 +13,10 @@ header {
   }
 
 }
-
 ul#main-nav-bar {
+  text-transform: none;
   border: 0px;
+  text-align: center;
 
   li a{
     color: $grey;

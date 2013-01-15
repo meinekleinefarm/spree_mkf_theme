@@ -3,32 +3,61 @@ table#cart-detail {
   text-align: left;
 
   thead {
-    background-color: $beige;
+    background-color: transparent;
     border-bottom: 1px solid $brown;
     text-transform: none;
   }
 
-  tbody {
+  tbody#line_items {
     border-bottom: 1px solid $brown;
-  }
 
-  td.cart-item-quantity {
-    input.line_item_quantity {
-      width: 30px !important;
+    tr.line-item {
+      border-bottom: 0px;
+
+      &.alt {
+        background-color: transparent;
+      }
+
+      td.cart-item-quantity {
+        input.line_item_quantity {
+          width: 30px;
+        }
+      }
+
+      td.cart-item-total {
+        font-size: 15px;
+      }
+
+      td.cart-item-description {
+        h4, a {
+          color: $brown;
+        }
+      }
     }
   }
+}
 
-  td.cart-item-description {
-    h4, a {
-      color: $brown;
+#update-cart {
+  #subtotal, .links {
+    @media only screen {
+      @media (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
-
-  .line-item {
-    border-bottom: 0px;
-
-    &.alt {
-      background-color: $beige;
+}
+#empty-cart {
+  #clear_cart_link {
+    @media only screen {
+      @media (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+      @media (min-width: 768px) {
+        margin-top: 40px
+      }
     }
+
   }
 }
