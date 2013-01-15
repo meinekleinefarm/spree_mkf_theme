@@ -70,3 +70,9 @@ body {
   text-align: left;
   float: left;
 }
+
+::selection, ::-moz-selection{
+  background: darken($beige, 5);
+  color: $grey;
+  text-shadow: none;
+}
