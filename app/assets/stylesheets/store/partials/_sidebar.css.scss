@@ -27,10 +27,10 @@ aside {
       border: solid;
       border-color: $brown;
       border-width: 3px 3px 3px 3px;
-      -moz-border-image: url(border.png) 3 3 3 3 repeat;
-      -webkit-border-image: url(border.png) 3 3 3 3 repeat;
-      -o-border-image: url(border.png) 3 3 3 3 repeat;
-      border-image: url(border.png) 3 3 3 3 fill repeat;
+      -moz-border-image: url(search-border.png) 3 3 3 3 repeat;
+      -webkit-border-image: url(search-border.png) 3 3 3 3 repeat;
+      -o-border-image: url(search-border.png) 3 3 3 3 repeat;
+      border-image: url(search-border.png) 3 3 3 3 fill repeat;
       padding: 2% 20% 2% 5%;
       background: white url(search-btn-lupe.png) 99% center no-repeat;
     }

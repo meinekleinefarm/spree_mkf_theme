@@ -1,0 +1,67 @@
+#checkout {
+  .row[data-hook="checkout_header"] {
+    border-bottom: 1px solid $brown;
+  }
+}
+
+ol.progress-steps{
+  li {
+    color: $grey;
+    text-transform: none;
+    padding-right: 0px;
+    margin-right: 0px;
+
+    &.current-first {
+      background-color: inherit;
+      color: inherit;
+      background-image: none;
+      span {
+        text-decoration: underline;
+      }
+
+    }
+
+    &.completed, &.completed-first, &.completed-last {
+      color: $brown;
+    }
+
+    &:after {
+      content: "\2192";
+      color: $pink;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    &.last:after, &.completed-last:after {
+      content: "";
+    }
+  }
+}
+
+#checkout_form_address {
+  legend {
+    text-transform: none;
+    color: $brown;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 0px;
+  }
+
+  fieldset {
+    border: 0px;
+  }
+
+  p.field {
+    padding: 0px;
+
+    select {
+      font-size: 17px;
+      width: 185px;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      padding: 5px 10px;
+      border: 1px solid $brown;
+    }
+  }
+}
