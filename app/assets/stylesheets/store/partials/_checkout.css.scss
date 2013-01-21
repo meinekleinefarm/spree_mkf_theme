@@ -11,23 +11,50 @@
     font-size: 20px;
   }
 
-  thead {
-    background-color: transparent;
-    border-bottom: 1px solid $brown;
-  }
+  table {
 
-  th {
-    text-transform: none;
-    text-align: left;
-  }
+    tfoot#order-total tr {
+      border-bottom: 1px solid $brown;
+      border-top: 0px solid $brown;
+    }
 
-  th.total, td.total {
-    width: 33%;
+    tbody, tfoot {
+      color: black;
 
-    span {
-      float: right;
+      tr {
+        border-bottom: 0px solid $beige;
+      }
+
+
+      td, td.total span {
+        color: black;
+      }
+    }
+
+    tbody {
+      border-bottom: 1px solid $brown;
+      border-top: 1px solid $brown;
+    }
+
+    thead {
+      background-color: transparent;
+
+    }
+
+    th {
+      text-transform: none;
+      text-align: left;
+    }
+
+    th.total, td.total {
+      width: 33%;
+
+      span {
+        float: right;
+      }
     }
   }
+
 }
 
 
