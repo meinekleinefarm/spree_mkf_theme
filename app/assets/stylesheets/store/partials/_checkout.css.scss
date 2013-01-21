@@ -9,6 +9,9 @@
 }
 
 ol.progress-steps{
+
+  list-style-type: none;
+
   li {
     color: $grey;
     text-transform: none;
@@ -16,21 +19,44 @@ ol.progress-steps{
     margin-right: 0px;
     padding-top: 20px;
 
-    &.current-first {
+    &.current, &.current-first {
       background-color: inherit;
       color: inherit;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    &.current-first {
       background-image: none;
     }
 
     &.completed, &.completed-first, &.completed-last {
+      background-color: transparent;
       color: $brown;
+
+      &:hover {
+        background-color: transparent;
+        color: $brown;
+
+        a:hover, a:visited {
+          color: $brown !important;
+          background-color: transparent;
+        }
+      }
+
+      a {
+        color: $brown;
+
+      }
+
       span{
         &:after {
           content: "\2713";
           position: relative;
           bottom: 20px;
           right: 30%;
-          text-decoration: none;
           color: $pink;
           font-size: 20px;
         }
@@ -50,7 +76,40 @@ ol.progress-steps{
   }
 }
 
-#checkout_form_address {
+#checkout_form_address, #checkout_form_delivery, #checkout_form_payment {
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid $brown;
+    padding: 5px;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    background-color: white;
+
+
+    &:checked {
+      background-color: white;
+      color: $pink;
+      border: 1px solid $brown;
+
+      &:after {
+        content: ' ';
+        width: 6px;
+        height: 6px;
+        border-radius: 50px;
+        position: absolute;
+        top: 2px;
+        background: $pink;
+        text-shadow: 0px;
+        left: 2px;
+        font-size: 32px;
+      }
+    }
+  }
+
   legend {
     text-transform: none;
     color: $brown;
@@ -71,6 +130,7 @@ ol.progress-steps{
       width: 185px;
       -moz-appearance: none;
       -webkit-appearance: none;
+      appearance: none;
       border-radius: 0px;
       padding: 5px 10px;
       border: 1px solid $brown;
