@@ -76,11 +76,10 @@ ol.progress-steps{
   }
 }
 
-#checkout_form_address, #checkout_form_delivery, #checkout_form_payment {
+#checkout_form_address, #checkout_form_delivery, #checkout_form_payment, #order_summary {
 
-  input[type="radio"] {
+  input.radio {
     -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     border: 1px solid $brown;
     padding: 5px;
