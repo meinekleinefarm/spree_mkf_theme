@@ -6,7 +6,30 @@
   h1 {
     padding-top: 9px;
   }
+
+  h6 {
+    font-size: 20px;
+  }
+
+  thead {
+    background-color: transparent;
+    border-bottom: 1px solid $brown;
+  }
+
+  th {
+    text-transform: none;
+    text-align: left;
+  }
+
+  th.total, td.total {
+    width: 33%;
+
+    span {
+      float: right;
+    }
+  }
 }
+
 
 ol.progress-steps{
 
@@ -70,13 +93,13 @@ ol.progress-steps{
       font-weight: bold;
     }
 
-    &.last:after, &.completed-last:after {
+    &.last:after, &.next-last:after, &.completed-last:after {
       content: "";
     }
   }
 }
 
-#checkout_form_address, #checkout_form_delivery, #checkout_form_payment, #order_summary {
+#checkout_form_address, #checkout_form_delivery, #checkout_form_payment, #order_summary, #checkout_form_confirm {
 
   input.radio {
     -webkit-appearance: none;
@@ -124,6 +147,13 @@ ol.progress-steps{
   p.field {
     padding: 0px;
 
+    &[data-hook="card_expiration"] {
+      select {
+        width: auto;
+      }
+
+    }
+
     select {
       font-size: 17px;
       width: 185px;
@@ -134,5 +164,6 @@ ol.progress-steps{
       padding: 5px 10px;
       border: 1px solid $brown;
     }
+
   }
 }
