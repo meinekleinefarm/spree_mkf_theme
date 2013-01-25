@@ -1,0 +1,29 @@
+-# encoding: UTF-8
+
+.columns.eight.alpha
+  %h1 Die Wurst ist unterwegs!
+  %p Frohe Nachrichten: Ihre Bestellung wurde erfolgreich bearbeitet und wir werden jetzt ganz schnell Ihr Päckchen packen und verschicken, damit Sie so schnell wie möglich leckere Wurst mit Gesicht in den Händen halten.
+  %p>
+    Ihre Bestellnummer ist
+    %b= @order.number
+
+  %p>
+    Und um sich die Wartezeit zu vertreiben empfehlen wir Meine kleine Farm auf
+    = link_to 'Facebook', 'http://www.facebook.com/meinekleinefarm'
+    zu befreunden, uns auf
+    = link_to 'Twitter', 'http://twitter.com/meatonamission'
+    zu folgen oder unseren
+    = link_to 'Blog', 'http://www.meinekleinefarm.org'
+    zu lesen.
+
+  %p Da Sie jetzt offiziell ein Agent für Meat on a Mission sind, würden wir uns freuen, wenn Sie Freunden und Bekannten von uns erzählen oder warum nicht mal etwas Wurst mit Gesicht verschenken?
+
+.columns.eight.omega
+  = image_tag 'store/success-pig-arrow.png', :style => 'width: 100%'
+.clear
+
+%p(data-hook="links")
+  = link_to t(:back_to_store), spree.root_path, :class => "button"
+  - unless params.has_key? :checkout_complete
+    - if try_spree_current_user && respond_to?(:spree_account_path)
+      = link_to t(:my_account), spree_account_path, :class => "button"
