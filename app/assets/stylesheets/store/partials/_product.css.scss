@@ -17,6 +17,8 @@ ul#products {
       text-align: left;
       border-bottom: 0px solid $brown;
       height: auto;
+      font-family: $ff_base;
+      font-size: 24px;
     }
 
     p.description {
@@ -25,22 +27,20 @@ ul#products {
       color: $black;
       font-weight: normal;
       font-size: 12px;
+      height: 8em;
     }
   }
 
-  ul#item-properties {
-    width: 100%;
-    li {
-      display: block;
-      float: left;
-      border-right: 1px solid $brown;
-      padding: 0px 5px;
-      font-size: 11px;
-      margin-bottom: 0px;
+  span.props {
+    border-right: 1px solid $brown;
+    padding: 0px 5px;
+    font-size: 11px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    float: left;
 
-      &.last {
-        border-right: 0px solid $brown;
-      }
+    &.last {
+      border-right: 0px solid $brown;
     }
   }
 
