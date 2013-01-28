@@ -3,14 +3,44 @@ ul#products {
 
   .product {
 
-    img.divider {
-      text-align: center;
-      width: 80%;
+    img {
+      width: 100%;
+
+      &.divider {
+        text-align: center;
+        width: 80%;
+      }
     }
 
     a.info {
       color: $brown;
       text-align: left;
+      border-bottom: 0px solid $brown;
+      height: auto;
+    }
+
+    p.description {
+      text-align: left;
+      padding: 0;
+      color: $black;
+      font-weight: normal;
+      font-size: 12px;
+    }
+  }
+
+  ul#item-properties {
+    width: 100%;
+    li {
+      display: block;
+      float: left;
+      border-right: 1px solid $brown;
+      padding: 0px 5px;
+      font-size: 11px;
+      margin-bottom: 0px;
+
+      &.last {
+        border-right: 0px solid $brown;
+      }
     }
   }
 
