@@ -1,6 +1,18 @@
 ul#products {
   list-style-type: none;
 
+  li {
+    border-bottom: 1px solid $brown;
+    border-width: 0px 0px 3px 0px;
+    -moz-border-image: url(border.png) 0 0 3 0 repeat;
+    -webkit-border-image: url(border.png) 0 0 3 0 repeat;
+    -o-border-image: url(border.png) 0 0 3 0 repeat;
+    border-image: url(border.png) 0 0 3 0 fill repeat;
+
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
   .product {
 
     img {
