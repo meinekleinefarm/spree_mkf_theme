@@ -1,8 +1,3 @@
 de:
   home: Shop-Startseite
-  spree:
-  spree:
-    date_picker:
-      format: ! '%d.%m.%Y'
-      js_format: 'dd.mm.yy'
   taxon_placeholder: "Produktklasse hinzufügen"
