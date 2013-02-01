@@ -1,8 +1,0 @@
-- content_for :head do
-  %meta{:property => "og:site_name",    :content => Spree::Config.site_name }
-  %meta{:property => "og:url",          :content => product_url(@product) }
-  %meta{:property => "og:title",        :content => @product.name}
-  %meta{:property => "og:type",         :content => 'product'}
-  %meta{:property => "fb:app_id",       :content => '299619636807927'}
-  %meta{:property => "og:description",  :content => @product.description}
-  %meta{:property => "og:image",        :content => image_path(@product.images.first.attachment.url) }

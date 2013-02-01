@@ -37,34 +37,3 @@ figure#logo {
     width: 300px;
   }
 }
-
-#social {
-
-  width: 30px;
-  padding: 10px 20px 10px;
-
-  .icon {
-    text-indent: -9999px;
-    width: 30px;
-    height: 30px;
-
-    &.icon-facebook {
-      background: url('icons/facebook.png') top left no-repeat;
-    }
-
-    &.icon-twitter {
-      background: url('icons/twitter.png') top left no-repeat;
-    }
-
-    &.icon-pinterest {
-      background: url('icons/pinterest.png') top left no-repeat;
-    }
-
-    &.icon-mail {
-      background: url('icons/mail.png') top left no-repeat;
-    }
-
-
-
-  }
-}

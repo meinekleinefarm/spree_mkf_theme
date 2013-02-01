@@ -4,10 +4,4 @@
     |
     = render :partial => 'price'
   .right
-    - uri = URI.parse('http://pinterest.com/pin/create/button/')
-    - uri.query = {:url => request.url, :media => @product.images.first.attachment.url(:original), :description => "Meine kleine Farm: #{@product.name}"}.to_param
-    .social.columns.three.right
-      = link_to uri.to_s, :class => "pin-it-button", :'count-layout' => "horizontal" do
-        = image_tag "//assets.pinterest.com/images/PinExt.png", :border => "0", :title => "Pin It"
-      .fb-like{'data-href' => product_url(@product), 'data-send' => "false", 'data-layout' => "button_count", 'data-width' => "124", 'data-show-faces' => "false", 'data-font' => "tahoma"}
 .clear

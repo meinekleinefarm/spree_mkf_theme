@@ -11,6 +11,13 @@ ul#products {
 
     padding-bottom: 10px;
     margin-bottom: 15px;
+
+    &.facebook {
+      border-width: 0px;
+      padding-bottom: 0px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
   }
 
   .product {
@@ -64,11 +71,6 @@ ul#products {
       background-color: white;
 
     }
-  }
-  .social {
-    height: 20px;
-    margin-top: 10px;
-    text-align: center
   }
 }
 

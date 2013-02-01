@@ -28,9 +28,14 @@
         <div id="cart-form" data-hook="cart_form">
           <%= render :partial => 'spree/products/index_cart_form', :locals => {:product => product} %>
         </div>
-        <div class="social">
-          <div class="fb-like" data-href="<%= product_url(product)%>" data-send="false" data-layout="button_count" data-width="124" data-show-faces="false" data-font="tahoma"></div>
-        </div>
+        <ul class="facebook-like-button">
+          <% if Spree::Config.facebook_button %>
+            <li class="facebook">
+              <%- @product = product %>
+              <%= render :partial => 'spree/social/facebook' %>
+            </li>
+          <% end %>
+        </ul>
       </li>
     <% end %>
   <% end %>
