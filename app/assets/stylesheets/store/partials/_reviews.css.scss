@@ -1,5 +1,9 @@
 #reviews {
 
+  div.review {
+    border-bottom: 0px;
+  }
+
   h6.product-section-title {
     float: left;
     line-height: 36px;
@@ -13,6 +17,13 @@
 
   .reviewBody {
     height: 70px;
+
+    p {
+      margin: 0;
+      padding: 10px 0;
+      color: $black;
+      font-size: 85%;
+    }
   }
 }
 
