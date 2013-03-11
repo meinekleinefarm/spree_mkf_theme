@@ -1,5 +1,3 @@
-<h2>Alle Leckereien aus Schwein</h2>
-<p>Oben links auf das aktuellste Schwein klicken, um seine Wurst zu bestellen (Schwarzweißschweine wurden bereits geschlachtet). Weiter unten ist auch sofort lieferbare Wurst vom sogenannten Schwein x zu haben. Alles ausverkauft? Gerne nehme ich Nachfragen oder Vorbestellung per Mail entgegen.</p>
 <%
   paginated_products = @searcher.retrieve_products if params.key?(:keywords)
   paginated_products ||= products
@@ -23,7 +21,7 @@
         <span class="props" itemprop="weight"><%= number_with_precision(product.weight, :precision => 0) %>g</span>
         <span class="props last" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
         <div class="clear"/>
-        <p class="description"><%= truncate(product.description, :length => 130) %></p>
+        <p class="description"><%= truncate(strip_tags(product.description), :length => 140) %></p>
 
         <div id="cart-form" data-hook="cart_form">
           <%= render :partial => 'spree/products/index_cart_form', :locals => {:product => product} %>
