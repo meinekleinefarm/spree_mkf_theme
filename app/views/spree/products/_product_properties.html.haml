@@ -1,8 +1,8 @@
 .p
   .left
-    = render :partial => 'weight'
+    = render :partial => 'spree/products/weight', :object => @product.weight
     |
-    = render :partial => 'price'
+    = render :partial => 'spree/products/price'
   .right
     = render :partial => 'spree/shared/social_buttons'
   .clear

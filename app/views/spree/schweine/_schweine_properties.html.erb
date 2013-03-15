@@ -1,0 +1,19 @@
+<div class="left">
+  <%= render :partial => 'spree/products/weight', :object => @schwein.weight %>
+  |
+  <span class="weight">
+      <b>
+        Geboren:
+      </b>
+      <%= l(180.days.ago.to_date) %>
+  </span>
+  |
+  <span class="weight">
+      <b>
+        Geschlachtet:
+      </b>
+      <%= l(@schwein.date_of_death) %>
+  </span>
+</div>
+<div class="right"></div>
+<div class="clear"></div>
