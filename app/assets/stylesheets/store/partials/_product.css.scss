@@ -50,19 +50,6 @@ ul#products {
     }
   }
 
-  span.props {
-    border-right: 1px solid $brown;
-    padding: 0px 5px;
-    font-size: 11px;
-    font-weight: normal;
-    margin-bottom: 0px;
-    float: left;
-
-    &.last {
-      border-right: 0px solid $brown;
-    }
-  }
-
   div.product-image {
 
     border: 1px solid lighten($grey, 30);
@@ -82,3 +69,15 @@ ul#products {
   }
 }
 
+span.props {
+  border-right: 1px solid $brown;
+  padding: 0px 5px;
+  font-size: 11px;
+  font-weight: normal;
+  margin-bottom: 0px;
+  float: left;
+
+  &.last {
+    border-right: 0px solid $brown;
+  }
+}
