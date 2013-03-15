@@ -1,0 +1,16 @@
+<% content_for :page_actions do %>
+  <li><%= button_link_to t(:back_to_schweine_list), session[:return_to] || admin_schweine_url, :icon => 'icon-arrow-left' %></li>
+  <li id="new_schwein_link">
+    <%= button_link_to t(:new_schwein), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_schwein' } %>
+  </li>
+<% end %>
+
+<%= render :partial => 'spree/admin/shared/schweine_tabs', :locals => { :current => 'Schweine Details' } %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @schwein } %>
+
+<%= form_for [:admin, @schwein], :method => :put, :html => { :multipart => true } do |f| %>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+  </fieldset>
+<% end %>

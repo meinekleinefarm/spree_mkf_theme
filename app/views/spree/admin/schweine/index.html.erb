@@ -1,3 +1,97 @@
 <% content_for :page_title do %>
   Schweine
 <% end %>
+
+<% content_for :page_actions do %>
+  <div class="toolbar" data-hook="toolbar">
+    <ul class="actions header-action-links inline-menu">
+      <li id="new_schwein_link">
+        <%= button_link_to t(:new_schwein), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_schwein' } %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<% content_for :table_filter_title do %>
+  <%= t(:search) %>
+<% end %>
+
+<% content_for :table_filter do %>
+  <div data-hook="admin_schweine_sidebar">
+
+    <%= search_form_for [:admin, @search] do |f| %>
+
+        <%- locals = {:f => f} %>
+
+        <div data-hook="admin_schweine_index_search">
+          <div class="alpha nine columns">
+            <div class="field">
+              <%= f.label :name_cont, t(:name) %>
+              <%= f.text_field :name_cont, :size => 15 %>
+            </div>
+          </div>
+          <div class="three columns omega">
+            <div class="field checkbox">
+              <label>
+                <%= f.check_box :deleted_at_null, {:checked => params[:q][:deleted_at_null].blank?}, '', '1' %>
+                <%= t(:show_deleted) %>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-buttons actions filter-actions" data-hook="admin_schweine_index_search_buttons">
+          <%= button t(:search), 'icon-search' %>
+        </div>
+    <% end %>
+  </div>
+<% end %>
+
+<div id="new_schwein" data-hook></div>
+
+<% if @collection.any? %>
+  <table class="index" id="listing_schweine">
+    <colgroup>
+       <col style="width: 7%;">
+       <col style="width: 35%;">
+       <col style="width: 10%;">
+       <col style="width: 10%;">
+       <col style="width: 10%;">
+       <col style="width: 17%;">
+    </colgroup>
+    <thead>
+      <tr data-hook="admin_schweine_index_headers">
+        <th colspan="2"><%= sort_link @search,:name, t(:name), { :default_order => "desc" }, {:title => 'admin_schweine_listing_name_title'} %></th>
+        <th><%= sort_link @search,:weight, t(:weight), {}, {:title => 'admin_schweine_weight_title'} %></th>
+        <th><%= sort_link @search,:date_of_death, t(:date_of_death), {}, {:title => 'admin_schweine_date_of_death_title'} %></th>
+        <th data-hook="admin_schweine_index_header_actions" class="actions"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @collection.each do |schwein| %>
+          <tr <%= "style='color: red;'" if schwein.deleted? %> id="<%= spree_dom_id schwein %>" data-hook="admin_schweine_index_rows" class="<%= cycle('odd', 'even') %>">
+            <td class="align-center"><%= mini_image(schwein) %></td>
+            <td><%= link_to schwein.try(:name), edit_admin_schwein_path(schwein) %></td>
+            <td class="align-center"><%= schwein.weight rescue '' %></td>
+            <td class="align-center"><%= l(schwein.date_of_death) rescue '' %></td>
+            <td class="actions" data-hook="admin_schweine_index_row_actions">
+              <%= link_to_edit schwein, :no_text => true, :class => 'edit' unless schwein.deleted? %>
+              &nbsp;
+              <%= link_to_clone schwein, :no_text => true, :class => 'clone' %>
+              &nbsp;
+              <%= link_to_delete schwein, :no_text => true unless schwein.deleted? %>
+            </td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="no-objects-found">
+    <%= t(:no_results) %>
+  </div>
+<% end %>
+
+<%= paginate @collection %>
+

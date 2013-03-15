@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => "spree/admin/shared/_product_sub_menu",
-                     :name => "add_schweine_tab_to_admin",
-                     :insert_bottom => "[data-hook='admin_product_sub_tabs']",
-                     :text => "<%= tab :schweine %> ")
+Deface::Override.new(:virtual_path => "spree/layouts/admin",
+                     :name => "schweine_admin_tab",
+                     :insert_bottom => "[data-hook='admin_tabs'], #admin_tabs[data-hook]",
+                     :text => "<%= tab(:schweine, :url => spree.admin_schweine_path, :icon => 'icon-camera') %>")

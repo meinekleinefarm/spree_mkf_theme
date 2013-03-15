@@ -1,0 +1,21 @@
+<% content_for :page_title do %>
+  <%= t(:editing_schwein) %> &ldquo;<%= @schwein.name %>&rdquo;
+<% end %>
+
+<% content_for :sidebar_title do %>
+  <span class="sku"><%= @schwein.name %></span>
+<% end %>
+
+<% content_for :sidebar do %>
+  <nav class="menu">
+    <ul data-hook="admin_schwein_tabs">
+      <li<%== ' class="active"' if current == 'schwein Details' %>>
+        <%= link_to_with_icon 'icon-edit', t(:schwein_details), edit_admin_schwein_url(@schwein) %>
+      </li>
+      <li<%== ' class="active"' if current == 'Images' %>>
+        <%= link_to_with_icon 'icon-picture', t(:images), admin_schwein_images_url(@schwein) %>
+      </li>
+    </ul>
+  </nav>
+
+<% end %>

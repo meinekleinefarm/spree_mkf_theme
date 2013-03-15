@@ -1,0 +1,38 @@
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @schwein } %>
+
+<%= form_for [:admin, @schwein], :html => { :multipart => true } do |f| %>
+
+<fieldset data-hook="new_schwein">
+
+  <legend align="center"><%= t(:new_schwein) %></legend>
+
+  <%= f.field_container :name do %>
+    <%= f.label :name, t(:name) %> <span class="required">*</span><br />
+    <%= f.text_field :name, :class => 'fullwidth title' %>
+    <%= f.error_message_on :name %>
+  <% end %>
+
+  <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+
+</fieldset>
+<% end %>
+
+<script type="text/javascript">
+//<![CDATA[
+  (function($){
+    var base_url = "<%= admin_prototypes_url %>";
+    var prototype_select = $('#schwein_prototype_id');
+    prototype_select.change(function() {
+      var id = prototype_select.val();
+      if (id.length) {
+        $('#schwein-from-prototype').load([ base_url, id ].join("/"));
+      } else {
+        $('#schwein-from-prototype').empty();
+      }
+    })
+    if (prototype_select.html() == "") {
+      prototype_select.change();
+    }
+  })(jQuery);
+//]]>
+</script>

@@ -1,0 +1,35 @@
+<div data-hook="schwein_show" itemscope itemtype="http://schema.org/schwein">
+  <% @body_id = 'schwein-details' %>
+
+  <div class="columns six alpha" data-hook="schwein_left_part">
+    <div class="row" data-hook="schwein_left_part_wrap">
+
+      <div id="product-images" data-hook="product_images">
+        <div id="main-image" data-hook>
+          <%= render :partial => 'spree/products/image', :object => @schwein.images.first %>
+        </div>
+        <div id="thumbnails" data-hook>
+          <%= render :partial => 'thumbnails' %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="columns ten omega" data-hook="schwein_right_part">
+    <div class="row" data-hook="schwein_right_part_wrap">
+
+      <div id="schwein-description" data-hook="schwein_description">
+
+        <h1 class="schwein-title" itemprop="name"><%= accurate_title %></h1>
+
+        <div itemprop="description" data-hook="description">
+          <%= schwein_description(@schwein) rescue t(:schwein_has_no_description) %>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

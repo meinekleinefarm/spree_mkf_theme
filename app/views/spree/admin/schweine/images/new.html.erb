@@ -1,0 +1,15 @@
+<%= form_for [:admin, @schwein, @image], :url => admin_schwein_images_path(@schwein, @image), :html => { :multipart => true } do |f| %>
+  <fieldset data-hook="new_image">
+    <legend align="center"><%= t(:new_image) %></legend>
+
+      <%= render :partial => 'spree/admin/schweine/images/form', :locals => { :f => f } %>
+
+      <div class="form-buttons filter-actions actions" data-hook="buttons">
+        <%= button t(:update), 'icon-refresh' %>
+        <span class="or"><%= t(:or) %></span>
+        <%= link_to_with_icon 'icon-remove', t(:cancel), admin_schwein_images_url(@schwein), :id => 'cancel_link', :class => 'button' %>
+      </div>
+  </fieldset>
+<% end %>
+
+<%= javascript_include_tag 'admin/images/new.js' %>

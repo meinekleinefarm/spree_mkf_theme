@@ -9,6 +9,7 @@ class Spree::SchweineController < Spree::StoreController
   end
 
   def show
+    @schwein = Spree::Schwein.find(params[:id])
   end
 
 end
