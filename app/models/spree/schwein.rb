@@ -17,7 +17,7 @@ module Spree
     end
 
     def products
-      Spree::OptionValue.find_by_presentation(name).variants.where('count_on_hand > 0').map(&:product)
+      Spree::OptionValue.find_by_presentation(name).variants.active.where('count_on_hand > 0').map(&:product).uniq rescue []
     end
 
 
