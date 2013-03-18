@@ -8,9 +8,4 @@
 - content_for :sidebar do
   %div{'data-hook' => "homepage_sidebar_navigation"}
     = render :partial => 'spree/shared/taxonomies'
-
-    %nav#taxonomies.sidebar-item
-      %h6.taxonomy-root Schweine
-      %ul.taxons-list
-        - Spree::Schwein.limit(1).order('created_at DESC').each do |schwein|
-          %li=link_to schwein.name, schwein_path(schwein)
+    = render :partial => 'spree/schweine/sidebar'

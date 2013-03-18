@@ -33,6 +33,9 @@
           <%= product_description(@schwein) rescue t(:schwein_has_no_description) %>
         </div>
 
+        <h3>Produkte von diesem Schwein kaufen</h3>
+        <%- @variant_name = @schwein.name %>
+        <%= render :partial => 'spree/shared/products', :locals => { :products => @schwein.products } %>
       </div>
 
     </div>
