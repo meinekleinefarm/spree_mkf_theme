@@ -1,5 +1,4 @@
 - unless weight.blank?
   %span.weight
     %b Gewicht:
-    = number_with_delimiter(weight)
-    g
+    = number_to_weight(weight)
