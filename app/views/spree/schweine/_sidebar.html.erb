@@ -4,8 +4,8 @@
     <li>
       <%= link_to("Alle Schweine", schweine_path) %>
     </li>
-    <%- Spree::Schwein.limit(1).order('created_at DESC').each do |schwein| %>
-      <li><%=link_to schwein.name, schwein_path(schwein)%></li>
+    <%- Spree::Schwein.limit(5).order('created_at DESC').each do |schwein| %>
+      <li><%=link_to schwein.name, schwein_path(schwein.permalink)%></li>
     <% end %>
   </ul>
 </nav>

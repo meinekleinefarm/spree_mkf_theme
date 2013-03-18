@@ -30,12 +30,23 @@
 
     <div class="clear"></div>
 
+    <%= f.field_container :date_of_birth do %>
+      <%= f.label :date_of_birth, t(:date_of_birth) %>
+      <%= f.error_message_on :date_of_birth %>
+      <%= f.text_field :date_of_birth, :size => 25, :value => datepicker_field_value(@schwein.date_of_birth), :class => 'datepicker' %>
+    <% end %>
+
+    <div class="clear"></div>
+
     <%= f.field_container :date_of_death do %>
       <%= f.label :date_of_death, t(:date_of_death) %>
       <%= f.error_message_on :date_of_death %>
       <%= f.text_field :date_of_death, :size => 25, :value => datepicker_field_value(@schwein.date_of_death), :class => 'datepicker' %>
     <% end %>
+
   </div>
+
+
 
   <!-- <h2><%= t(:metadata) %></h2> -->
   <div data-hook="admin_schwein_form_meta" class="alpha omega twelve columns">

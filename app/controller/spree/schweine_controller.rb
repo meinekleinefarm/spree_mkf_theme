@@ -9,7 +9,7 @@ class Spree::SchweineController < Spree::StoreController
   end
 
   def show
-    @schwein = Spree::Schwein.find(params[:id])
+    @schwein = Spree::Schwein.find_by_permalink(params[:id])
   end
 
 end

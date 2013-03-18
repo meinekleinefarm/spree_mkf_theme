@@ -65,6 +65,7 @@
       <tr data-hook="admin_schweine_index_headers">
         <th colspan="2"><%= sort_link @search,:name, t(:name), { :default_order => "desc" }, {:title => 'admin_schweine_listing_name_title'} %></th>
         <th><%= sort_link @search,:weight, t(:weight), {}, {:title => 'admin_schweine_weight_title'} %></th>
+        <th><%= sort_link @search,:date_of_birth, t(:date_of_birth), {}, {:title => 'admin_schweine_date_of_birth_title'} %></th>
         <th><%= sort_link @search,:date_of_death, t(:date_of_death), {}, {:title => 'admin_schweine_date_of_death_title'} %></th>
         <th data-hook="admin_schweine_index_header_actions" class="actions"></th>
       </tr>
@@ -75,6 +76,7 @@
             <td class="align-center"><%= mini_image(schwein) %></td>
             <td><%= link_to schwein.try(:name), edit_admin_schwein_path(schwein) %></td>
             <td class="align-center"><%= schwein.weight rescue '' %></td>
+            <td class="align-center"><%= l(schwein.date_of_birth) rescue '' %></td>
             <td class="align-center"><%= l(schwein.date_of_death) rescue '' %></td>
             <td class="actions" data-hook="admin_schweine_index_row_actions">
               <%= link_to_edit schwein, :no_text => true, :class => 'edit' unless schwein.deleted? %>
