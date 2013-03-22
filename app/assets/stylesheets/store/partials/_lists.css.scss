@@ -1,0 +1,57 @@
+ul.filter_choices, ul.taxons-list, ul#similar_items_by_taxon {
+
+  font-family: $ff_regular;
+  list-style-type: none;
+  list-style-position: outside;
+
+  margin: 0 0 10px 10px;
+
+  li:before{
+    content:"\00BB\00A0";
+  }
+}
+
+ul.variant-list {
+  list-style-type: none;
+}
+
+ol.legal {
+  counter-reset: section;
+  list-style-type: none;
+
+  ol {
+    counter-reset: section;
+    list-style-type: none;
+
+    li {
+      font-weight: normal;
+    }
+  }
+
+  li {
+    counter-increment: section;
+    margin-top: 0.5em;
+    font-weight: bold;
+
+    &:before {
+      content: counters(section, ".") ". ";
+    };
+
+    p {
+      font-weight: normal;
+    }
+  }
+
+}
+
+.footer-list {
+  text-align: center;
+  span {
+    line-height: 70px;
+    padding: 0px 10px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

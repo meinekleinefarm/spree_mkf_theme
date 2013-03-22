@@ -3,6 +3,7 @@ footer#footer {
   background-image: url('footer.jpg');
   background-position: center center;
   width: 100%;
+  height: 70px;
 
   @include box-shadow(0 0 30px $shadow);
 

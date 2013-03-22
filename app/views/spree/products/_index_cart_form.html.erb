@@ -1,4 +1,4 @@
-<%= form_for :order, :url => populate_orders_path do |f| %>
+<%= form_for :order, :url => populate_orders_path, :id => 'cart_form' do |f| %>
   <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
     <% if product.has_variants? %>
@@ -13,7 +13,7 @@
           <% end %>
         <%- else -%>
           <h6 class="product-section-title"><%= t(:variants) %></h6>
-          <ul>
+          <ul class="variants-list">
             <% has_checked = false
             product.variants.active(current_currency).each_with_index do |v,index|
               next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products])

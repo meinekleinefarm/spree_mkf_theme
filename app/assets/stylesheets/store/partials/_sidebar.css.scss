@@ -36,19 +36,6 @@ aside#sidebar {
     }
   }
 
-  .filter_choices, .taxons-list {
-
-    font-family: $ff_regular;
-    list-style-type: none;
-    list-style-position: outside;
-
-    margin: 0 0 10px 10px;
-
-    li:before{
-      content:"\00BB\00A0";
-    }
-  }
-
   div[data-hook="homepage_sidebar_navigation"], div[data-hook="taxon_sidebar_navigation"] {
     padding: 10px;
   }
