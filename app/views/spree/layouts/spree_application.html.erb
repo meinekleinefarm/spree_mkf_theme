@@ -18,27 +18,23 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    <!-- <div class="container"> -->
+    <%= render :partial => 'spree/shared/header' %>
 
-      <%= render :partial => 'spree/shared/header' %>
+    <div id="wrapper" class="row" data-hook>
 
-      <div id="wrapper" class="row" data-hook>
+      <%= breadcrumbs(@taxon) %>
 
-        <%= breadcrumbs(@taxon) %>
-
-        <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve" %>" data-hook>
-          <%= flash_messages %>
-          <%= yield %>
-        </div>
-
-        <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
-
+      <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %>" data-hook>
+        <%= flash_messages %>
+        <%= yield %>
       </div>
 
-      <%= render :partial => 'spree/shared/footer' %>
+      <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
 
-    <!-- </div> -->
-    <%= javascript_include_tag 'http://assets.pinterest.com/js/pinit.js' %>
+    </div>
+
+    <%= render :partial => 'spree/shared/footer' %>
+
     <%= render :partial => 'spree/shared/google_analytics' %>
 
   </body>

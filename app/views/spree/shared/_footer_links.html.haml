@@ -1,4 +1,6 @@
-.footer-list
-  %span= "&copy; Meine kleine Farm #{Date.today.year}".html_safe
-  - Spree::Page.footer_links.limit(6).each do |page|
-    %span= link_to page.title, page.slug, :title => page.meta_title
+.nav.center
+  %ul
+    %li
+      %span="&copy; Meine kleine Farm #{Date.today.year}".html_safe
+    - Spree::Page.footer_links.limit(6).each do |page|
+      %li= link_to page.title, page.slug, :title => page.meta_title
