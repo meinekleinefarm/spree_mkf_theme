@@ -1,0 +1,23 @@
+<%= t('order_mailer.confirm_email.dear_customer', :name => @order.bill_address.full_name) %>,
+
+<%= t('order_mailer.confirm_email.instructions') %>
+
+<%= t('order_mailer.confirm_email.order_summary') %>
+============================================================
+<% @order.line_items.each do |item| %>
+  <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%> (<%=item.quantity%>) @ <%= item.variant.display_amount %> = <%= item.display_amount %>
+<% end %>
+============================================================
+<%= t('order_mailer.confirm_email.subtotal') %> <%= @order.display_item_total %>
+<% @order.adjustments.eligible.each do |adjustment| %>
+<%= raw(adjustment.label) %> <%= adjustment.display_amount %>
+<% end %>
+<%= t('order_mailer.confirm_email.total') %> <%= @order.display_total %>
+Alle Preise inkl. 7% Mwst.
+
+Du hast per <%= @order.payments.first.try(:payment_method).try(:name) %> bezahlt, danke.
+
+------------------------------------------------------------
+<%= t('order_mailer.confirm_email.thanks').html_safe %>
+
+<%= t('order_mailer.signature') %>

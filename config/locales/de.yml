@@ -4,3 +4,11 @@ de:
   schweine: Schweine
   date_of_death: Geschlachtet
   date_of_birth: Geboren
+
+  order_mailer:
+    confirm_email:
+      dear_customer: "Hallo %{name}"
+      instructions: "danke für Deine Bestellung! Wir verschicken Deine Wurst in den nächsten Tagen, bzw. wenn „Dein“ Schwein noch nicht geschlachtet wurde zwei bis drei Wochen danach. Du bekommst eine E-Mail, sobald das Paket zu Dir unterwegs ist."
+      order_summary: "Deine Wurst:"
+      thanks: "Vielen Dank, guten Appetit und: \"Für ein neues BewuRstsein!\"\nDennis Buchmann"
+    signature: "-- \nMeinekleineFarm.org UG (haftungsbeschränkt)\nRegistergericht: Berlin Charlottenburg, HRB 139635 B\nGeschäftsführer (Chefschwein): Dennis Buchmann\nTelefon +49 176 23236620\nJonasstr. 25\n12053 Berlin"
