@@ -1,4 +1,4 @@
 - unless weight.blank?
   %span.weight
     %b Gewicht:
-    = number_to_weight(weight)
+    %span(itemprop="weight")= number_to_weight(weight)

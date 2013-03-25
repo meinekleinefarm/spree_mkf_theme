@@ -52,11 +52,7 @@ ul#products {
 
   div.product-image {
 
-    border: 1px solid lighten($grey, 30);
-    a {
-      background-color: white;
-
-    }
+    border: 0px solid $grey;
   }
 }
 
