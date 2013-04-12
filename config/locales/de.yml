@@ -11,4 +11,14 @@ de:
       instructions: "danke für Deine Bestellung! Wir verschicken Deine Wurst in den nächsten Tagen, bzw. wenn „Dein“ Schwein noch nicht geschlachtet wurde zwei bis drei Wochen danach. Du bekommst eine E-Mail, sobald das Paket zu Dir unterwegs ist."
       order_summary: "Deine Wurst:"
       thanks: "Vielen Dank, guten Appetit und: \"Für ein neues BewuRstsein!\"\nDennis Buchmann"
+      subject: "Es geht um die Wurst"
+    signature: "-- \nMeinekleineFarm.org UG (haftungsbeschränkt)\nRegistergericht: Berlin Charlottenburg, HRB 139635 B\nGeschäftsführer (Chefschwein): Dennis Buchmann\nTelefon +49 176 23236620\nJonasstr. 25\n12053 Berlin"
+
+  shipment_mailer:
+    shipped_email:
+      dear_customer: "Hallo %{name}"
+      instructions: "Deine Wurst ist auf dem Weg zu Dir. Hier der Link zur Sendungsverfolgung Deiner Bestellung %{number}. Falls der Link noch nicht aktiv ist, bitte ein bisschen gedulden."
+      track_information: "DHL Tracking Nummer: %{tracking}"
+      thanks: "BewuRste Mahlzeit wünschen wir!\n\nDennis und die anderen Schweine von MeinekleineFarm.org"
+      subject: "Wurst ist unterwegs!"
     signature: "-- \nMeinekleineFarm.org UG (haftungsbeschränkt)\nRegistergericht: Berlin Charlottenburg, HRB 139635 B\nGeschäftsführer (Chefschwein): Dennis Buchmann\nTelefon +49 176 23236620\nJonasstr. 25\n12053 Berlin"
