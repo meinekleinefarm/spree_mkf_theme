@@ -1,6 +1,9 @@
 aside#sidebar {
+  font-family: $ff_regular;
+  font-size: 13px;
+  margin: 20px 10px 10px;
+  height: 22px;
 
-  margin-bottom: 10px;
 
   #sidebar_wrapper {
     background: $greyblue url('sidebar-texture.jpg') top left;
@@ -20,10 +23,17 @@ aside#sidebar {
     background-position: center 10px;
     background-repeat: no-repeat;
     padding-top: 20px;
+    margin: 20px 10px 10px;
+    font-family: $ff_regular;
+    font-size: 13px;
+    height: 22px;
 
     input#keywords {
+      font-family: $ff_regular;
+      font-size: 13px;
       width: 63%;
-      margin: 10px;
+      height: 22px;
+      margin: 20px 10px 10px;
       border: solid;
       border-color: $brown;
       border-width: 3px 3px 3px 3px;
@@ -45,6 +55,7 @@ aside#sidebar {
   h6.filter-title {
     font-size: 120%;
     font-family: $ff_base;
+    font-weight: 500;
 
     border: solid;
     border-color: $brown;
@@ -57,16 +68,27 @@ aside#sidebar {
 }
 
 nav#taxonomies {
+
+  font-size: 13px;
+
   h6.taxonomy-root {
     font-size: 120%;
     font-family: $ff_base;
+    font-weight:normal;
+    padding-top: 12px;
+    margin-bottom: 0px;
     border: solid;
     border-color: $brown;
     -moz-border-image: url(border.png) 0 0 3 0 repeat;
-    -webkit-border-image: url(border.png) 0 0 3 0 repeat;
+    -webkit-border-image: url(border.png) 3 0 0 0 repeat;
     -o-border-image: url(border.png) 0 0 3 0 repeat;
-    border-image: url(border.png) 0 0 3 0 fill repeat;
+    border-image: url(border.png) 3 0 0 0 fill repeat;
 
+
+  }
+
+  .taxons-list li a {
+    font-size: 13px;
   }
 
   a {

@@ -18,5 +18,10 @@ footer#footer {
 
 }
 
+div.footer-list span {
+  font-size: 13px;
+}
+
+
 /* Hide Pinterest iframe */
 iframe[class*='PIN_'], iframe[class^='PIN_'] { display: none !important; }

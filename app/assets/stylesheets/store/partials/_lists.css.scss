@@ -1,10 +1,10 @@
 ul.filter_choices, ul.taxons-list, ul#similar_items_by_taxon {
-
+  font-size:13px;
   font-family: $ff_regular;
   list-style-type: none;
   list-style-position: outside;
 
-  margin: 0 0 10px 10px;
+  margin: 0 0 10px 5px;
 
   li:before{
     content:"\00BB\00A0";

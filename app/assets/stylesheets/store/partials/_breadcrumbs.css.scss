@@ -1,3 +1,10 @@
 nav#breadcrumbs {
   background: $beige;
+
+  ul {
+    li {
+      font-size: 12px;
+      color: $brown;
+    }
+  }
 }
