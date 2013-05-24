@@ -28,29 +28,26 @@ $product_link_text_color:   $pink;
 /*--------------------------------------*/
 @font-face {
   font-family: 'Yanone Kaffeesatz';
-  src: url('/assets/YanoneKaffeesatz-Regular-webfont.eot');
+  src: font-url('YanoneKaffeesatz-Regular-webfont.eot');
   src: local('Yanone Kaffeesatz Regular'),
        local('YanoneKaffeesatz-Regular'),
-       url('/assets/YanoneKaffeesatz-Regular-webfont.woff') format('woff'),
-       url('/assets/YanoneKaffeesatz-Regular-webfont.eot') format('embedded-opentype'),
-       url('/assets/YanoneKaffeesatz-Regular-webfont.ttf') format('truetype'),
-       url('/assets/YanoneKaffeesatz-Regular-webfont.svg') format('svg');
+       font-url('YanoneKaffeesatz-Regular-webfont.woff') format('woff'),
+       font-url('YanoneKaffeesatz-Regular-webfont.ttf') format('truetype'),
+       font-url('YanoneKaffeesatz-Regular-webfont.svg') format('svg');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Yanone Kaffeesatz';
-  src: url('/assets/YanoneKaffeesatz-Bold-webfont.eot');
+  src: font-url('YanoneKaffeesatz-Bold-webfont.eot');
   src: local('Yanone Kaffeesatz Bold'),
        local('YanoneKaffeesatz-Bold'),
-       url('/assets/YanoneKaffeesatz-Bold-webfont.woff') format('woff'),
-       url('/assets/YanoneKaffeesatz-Bold-webfont.ttf') format('truetype'),
-       url('/assets/YanoneKaffeesatz-Bold-webfont.eot') format('embedded-opentype'),
-       url('/assets/YanoneKaffeesatz-Bold-webfont.svg') format('svg');
+       font-url('YanoneKaffeesatz-Bold-webfont.woff') format('woff'),
+       font-url('YanoneKaffeesatz-Bold-webfont.ttf') format('truetype'),
+       font-url('YanoneKaffeesatz-Bold-webfont.svg') format('svg');
   font-style: normal;
   font-weight: bold;
-
 }
 
 /*--------------------------------------*/
