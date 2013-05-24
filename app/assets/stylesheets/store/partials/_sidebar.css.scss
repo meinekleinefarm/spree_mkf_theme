@@ -30,9 +30,9 @@ aside#sidebar {
     input#keywords {
       font-family: $ff_regular;
       font-size: 13px;
-      width: 63%;
+      width: 70%;
       height: 22px;
-      margin: 20px 10px 10px;
+      margin: 25px 0px 10px;
       border: solid;
       border-color: $brown;
       border-width: 3px 3px 3px 3px;
@@ -41,7 +41,7 @@ aside#sidebar {
       -o-border-image: url(search-border.png) 3 3 3 3 repeat;
       border-image: url(search-border.png) 3 3 3 3 fill repeat;
       padding: 2% 20% 2% 5%;
-      background: white url(search-btn-lupe.png) 99% center no-repeat;
+      background: white url(search-btn-lupe.png) 97% center no-repeat;
     }
   }
 
@@ -71,7 +71,8 @@ nav#taxonomies {
   font-size: 13px;
 
   h6.taxonomy-root {
-    font-size: 120%;
+    font-size: 140%;
+    text-transform: none;
     font-family: $ff_base;
     font-weight:normal;
     padding-top: 12px;

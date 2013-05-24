@@ -53,6 +53,10 @@ ul#products {
   div.product-image {
     padding: 0px;
     border: 0px solid $grey;
+
+    a:hover {
+      opacity: 0.9;
+    }
   }
 }
 
