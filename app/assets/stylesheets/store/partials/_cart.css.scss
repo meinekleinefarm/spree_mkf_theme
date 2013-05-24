@@ -71,6 +71,12 @@ table#cart-detail {
         h4, a {
           color: $brown;
         }
+
+        @media only screen {
+          @media (max-width: 480px) {
+            display: none;
+          }
+        }
       }
     }
   }

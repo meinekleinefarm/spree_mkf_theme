@@ -33,10 +33,10 @@ aside#sidebar {
       border: solid;
       border-color: $brown;
       border-width: 3px 3px 3px 3px;
-      -moz-border-image: url(search-border.png) 3 3 3 3 repeat;
-      -webkit-border-image: url(search-border.png) 3 3 3 3 repeat;
-      -o-border-image: url(search-border.png) 3 3 3 3 repeat;
-      border-image: url(search-border.png) 3 3 3 3 fill repeat;
+      -moz-border-image: url(search-border.png) 3 round;
+      -webkit-border-image: url(search-border.png) 3 round;
+      -o-border-image: url(search-border.png) 3 round;
+      border-image: url(search-border.png) 3 fill round;
       padding: 7px 15px 7px;
       background: white url(search-btn-lupe.png) 97% center no-repeat;
 
@@ -69,13 +69,14 @@ aside#sidebar {
     font-family: $ff_base;
     font-weight: 500;
 
+    color: $brown;
     border: solid;
     border-color: $brown;
-    -moz-border-image: url(border.png) 0 0 3 0 repeat;
-    -webkit-border-image: url(border.png) 0 0 3 0 repeat;
-    -o-border-image: url(border.png) 0 0 3 0 repeat;
-    border-image: url(border.png) 0 0 3 0 fill repeat;
-    color: $brown;
+    border-width: 3px 0 0 0;
+    -moz-border-image: url(border.png) 3 round;
+    -webkit-border-image: url(border.png) 3 round;
+    -o-border-image: url(border.png) 3  round;
+    border-image: url(border.png) 3 fill round;
   }
 }
 
@@ -92,12 +93,11 @@ nav#taxonomies {
     margin-bottom: 0px;
     border: solid;
     border-color: $brown;
-    -moz-border-image: url(border.png) 0 0 3 0 repeat;
-    -webkit-border-image: url(border.png) 3 0 0 0 repeat;
-    -o-border-image: url(border.png) 0 0 3 0 repeat;
-    border-image: url(border.png) 3 0 0 0 fill repeat;
-
-
+    border-width: 3px 0 0 0;
+    -moz-border-image: url(border.png) 3 round;
+    -webkit-border-image: url(border.png) 3 round;
+    -o-border-image: url(border.png) 3  round;
+    border-image: url(border.png) 3 fill round;
   }
 
   .taxons-list li a {
