@@ -47,6 +47,7 @@ p {
     -o-border-image: url(border.png) 3 3 3 3 repeat;
     border-image: url(border.png) 3 3 3 3 fill repeat;
     @include box-shadow(0 0 30px $shadow);
+    padding: 10px;
 
     /* Für moderne Browser */
     min-height: 100% !important;
@@ -54,15 +55,6 @@ p {
     /* Für den Internet Explorer 6 */
     height: auto !important;
     height: 100% !important;
-
-    @media only screen {
-      @media (min-width: 768px) and (max-width: 959px) {
-        padding-left: 0px;
-      }
-      @media (max-width: 767px) {
-        padding: 0px 10px;
-      }
-    }
   }
 }
 

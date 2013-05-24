@@ -23,6 +23,11 @@ ul#main-nav-bar {
     font-size: 13px;
     color: $grey;
 
+    &:hover{
+      color: $pink;
+      text-decoration: underline;
+    }
+
     span.amount {
       border-color: $grey;
       font-weight: normal;

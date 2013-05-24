@@ -1,9 +1,6 @@
 aside#sidebar {
   font-family: $ff_regular;
   font-size: 13px;
-  margin: 20px 10px 10px;
-  height: 22px;
-
 
   #sidebar_wrapper {
     background: $greyblue url('sidebar-texture.jpg') top left;
@@ -30,7 +27,7 @@ aside#sidebar {
     input#keywords {
       font-family: $ff_regular;
       font-size: 13px;
-      width: 70%;
+      width: 155px;
       height: 22px;
       margin: 25px 0px 10px;
       border: solid;
@@ -40,8 +37,24 @@ aside#sidebar {
       -webkit-border-image: url(search-border.png) 3 3 3 3 repeat;
       -o-border-image: url(search-border.png) 3 3 3 3 repeat;
       border-image: url(search-border.png) 3 3 3 3 fill repeat;
-      padding: 2% 20% 2% 5%;
+      padding: 7px 15px 7px;
       background: white url(search-btn-lupe.png) 97% center no-repeat;
+
+      @media only screen {
+        @media (min-width: 768px) and (max-width: 979px) {
+          width: 110px;
+        }
+
+        @media (max-width: 767px) {
+          width: 355px;
+        }
+
+        @media (max-width: 480px) {
+          width: 235px;
+        }
+
+      }
+
     }
   }
 
@@ -93,5 +106,6 @@ nav#taxonomies {
 
   a {
     color: $brown;
+    text-decoration: none;
   }
 }

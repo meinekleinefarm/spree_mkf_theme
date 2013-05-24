@@ -32,6 +32,30 @@ a.button, button, input[type="submit"], #add-to-cart-button {
   min-width:120px;
   padding: 8px 20px;
   margin: 20px 0;
+  line-height: 20px;
+
+  &#checkout-link {
+    .push-forward {
+      font-family: $ff_base;
+      font-size: 26px;
+      vertical-align: text-bottom;
+      margin-left: 10px;
+    }
+  }
+
+  &#update-button {
+    border: none;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    &:hover{
+      text-decoration: underline;
+      color: $pink;
+    }
+  }
+
 
 
   &:hover{
@@ -46,7 +70,7 @@ a.button, button, input[type="submit"], #add-to-cart-button {
     background-image: -o-linear-gradient(top, #fdeeec, #f7a193);
     background-image: linear-gradient(top, #fdeeec, f7a193);
     background-repeat: repeat-x;
-    border-color:#f7a193;
+    border-color:#ccc;
     color: inherit;
 
   }
