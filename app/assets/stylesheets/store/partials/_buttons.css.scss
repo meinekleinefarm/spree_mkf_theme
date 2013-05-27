@@ -35,8 +35,12 @@ a.button, button, input[type="submit"], #add-to-cart-button {
   line-height: 20px;
 
   &#checkout-link {
+
+    &:hover {
+      border: 1px solid $pink;
+    }
     .push-forward {
-      font-family: $ff_base;
+      font-family: $ff_regular;
       font-size: 26px;
       vertical-align: text-bottom;
       margin-left: 10px;
@@ -96,6 +100,7 @@ a.button, button, input[type="submit"], #add-to-cart-button {
     background-image: -webkit-linear-gradient(top, #eeeeee, #aaaaaa);
     background-image: -o-linear-gradient(top, #eeeeee, #aaaaaa);
     background-image: linear-gradient(top, #eeeeee, aaaaaa);
+    border: 1px solid $lightGrey;
 
     &:hover {
       background-image: -moz-linear-gradient(top, #efefef, #bcbcbc);
@@ -104,6 +109,7 @@ a.button, button, input[type="submit"], #add-to-cart-button {
       background-image: -webkit-linear-gradient(top, #efefef, #bcbcbc);
       background-image: -o-linear-gradient(top, #efefef, #bcbcbc);
       background-image: linear-gradient(top, #efefef, bcbcbc);
+      border: 1px solid darken($lightGrey, 5%);
     }
 
     &:active{

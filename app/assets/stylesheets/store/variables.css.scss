@@ -53,8 +53,8 @@ $product_link_text_color:   $pink;
 /*--------------------------------------*/
 /* Font families
 /*--------------------------------------*/
-$ff_base:       'Yanone Kaffeesatz', sans-serif !default;
-$ff_regular:    'Tahoma', sans-serif !default;
+$ff_base:       'Tahoma', sans-serif !default;
+$ff_regular:    'Yanone Kaffeesatz', sans-serif !default;
 
 /*--------------------------------------
   | Font sizes
@@ -71,7 +71,7 @@ $ff_regular:    'Tahoma', sans-serif !default;
       $product_list_name_font_size:           16px !default; // Schrift unter Produkt Bild
       $product_list_price_font_size:          20px !default;
       $product_list_header_font_size:         24px !default;
-      $product_list_search_font_size:         18px !default;
+      $product_list_search_font_size:         40px !default;
 /*|------------------------------------
   |- Product Details
   |                                  */
