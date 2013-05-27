@@ -1,15 +1,39 @@
+h6.product-section-title {
+  text-transform: none;
+}
+
 #reviews {
 
   div.review {
     border-bottom: 0px;
+
+    span {
+      font-size: $base_font_size;
+      &.attribution {
+        font-size: $base_font_size;
+        strong {
+          font-weight: normal;
+        }
+
+      }
+    }
   }
 
   h6.product-section-title {
     float: left;
-    line-height: 36px;
     margin-right: 5px;
+    text-transform: none;
   }
 
+  .itemName {
+    font-weight: bold;
+    font-family: $ff_base;
+    font-size: $base_font_size;
+  }
+
+  .datePublished {
+    font-weight: normal;
+  }
 
   .reviews-none {
     line-height: 16px;
@@ -24,6 +48,10 @@
       color: $black;
       font-size: 85%;
     }
+  }
+
+  .ratings {
+    line-height: 45px;
   }
 }
 
