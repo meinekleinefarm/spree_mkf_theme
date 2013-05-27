@@ -7,13 +7,16 @@
   padding-bottom: 10px;
 
   h5 {
-    font-family: $ff_regular;
+    font-family: $ff_base;
+    font-size: $base_font_size;
+    font-weight: bold;
     text-transform: none;
+
   }
 
   span.order-total {
-    font-family: $ff_regular;
-    font-size: 13px;
+    font-family: $ff_base;
+    font-size: $base_font_size;
     padding: 0px 10px;
     color: $brown !important;
   }
@@ -28,7 +31,7 @@ table#cart-detail {
     text-transform: none;
 
     th {
-      font-size: 13px;
+      font-size: $base_font_size;
       font-weight: normal;
       color: $brown;
     }
@@ -38,7 +41,7 @@ table#cart-detail {
     border-bottom: 1px solid $brown;
 
     td {
-      font-size: 13px;
+      font-size: $base_font_size;
       font-weight: normal;
       color: $brown;
     }
@@ -62,7 +65,7 @@ table#cart-detail {
       }
 
       td.cart-item-total {
-        font-size: 13px;
+        font-size: $base_font_size;
         color: $brown;
         text-align: right;
       }

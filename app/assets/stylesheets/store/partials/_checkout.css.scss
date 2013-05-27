@@ -162,7 +162,7 @@ ol.progress-steps{
   legend {
     text-transform: none;
     color: $brown;
-    font-size: 24px;
+    font-size: $base_font_size;
     text-align: left;
     margin-left: 0px;
   }
@@ -181,8 +181,13 @@ ol.progress-steps{
 
     }
 
+    &[data-hook="use_billing"] {
+      margin-top: -10px;
+      margin-bottom: -10px;
+      float: none;
+    }
+
     select {
-      font-size: 17px;
       width: 185px;
       -moz-appearance: none;
       -webkit-appearance: none;
@@ -192,5 +197,24 @@ ol.progress-steps{
       border: 1px solid $brown;
     }
 
+  }
+}
+#checkout-summary {
+  h3 {
+    font-family: $ff_base;
+    font-weight: bold;
+    font-size: $base_font_size;
+    text-transform: none;
+    border-bottom: 0px;
+  }
+  table  {
+    td {
+      color: $brown;
+    }
+    tr[data-hook="item_total"] td:last-child strong, #summary-order-total {
+      color: $brown;
+      font-weight: normal;
+      font-size: $base_font_size;
+    }
   }
 }
