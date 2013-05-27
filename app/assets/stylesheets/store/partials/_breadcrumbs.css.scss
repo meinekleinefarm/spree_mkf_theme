@@ -7,6 +7,10 @@ nav#breadcrumbs {
       color: $brown;
     }
   }
+
+  li span {
+    text-transform: none;
+  }
 }
 
 #taxon-crumbs {

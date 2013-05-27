@@ -33,12 +33,8 @@ a.button, button, input[type="submit"], #add-to-cart-button {
   padding: 8px 20px;
   margin: 20px 0;
   line-height: 20px;
-
   &#checkout-link {
 
-    &:hover {
-      border: 1px solid $pink;
-    }
     .push-forward {
       font-family: $ff_regular;
       font-size: 26px;
@@ -74,7 +70,7 @@ a.button, button, input[type="submit"], #add-to-cart-button {
     background-image: -o-linear-gradient(top, #fdeeec, #f7a193);
     background-image: linear-gradient(top, #fdeeec, f7a193);
     background-repeat: repeat-x;
-    border-color:#ccc;
+    border-color:$pink;
     color: inherit;
 
   }
