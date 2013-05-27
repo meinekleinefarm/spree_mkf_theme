@@ -8,3 +8,14 @@ nav#breadcrumbs {
     }
   }
 }
+
+#taxon-crumbs {
+  h6 {
+    font-size: 26px;
+  }
+}
+
+#similar_items_by_taxon li a{
+  font-family: $ff_base;
+  font-size: 13px;
+}
