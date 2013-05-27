@@ -1,0 +1,29 @@
+<h3><%= t(:order_summary) %></h3>
+
+<table data-hook="order_summary">
+  <tbody>
+    <tr data-hook="item_total">
+      <td><%= t(:item_total) %>:</td>
+      <td><%= order.display_item_total %></td>
+    </tr>
+    <% order.adjustments.eligible.each do |adjustment| %>
+    <% next if (adjustment.originator_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
+      <tr>
+        <td><%= adjustment.label %>: </td>
+        <td><%= adjustment.display_amount %></td>
+      </tr>
+    <% end %>
+    <tr data-hook="order_total">
+      <td><%= t(:order_total) %>:</td>
+      <td><span id='summary-order-total'><%= @order.display_total %></span></td>
+    </tr>
+    <% if order.price_adjustment_totals.present? %>
+      <% @order.price_adjustment_totals.each do |label, total| %>
+        <tr class="total">
+          <td><%= label %></td>
+          <td><span><%= total %></span></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
