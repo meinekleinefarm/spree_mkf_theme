@@ -207,11 +207,8 @@ ol.progress-steps{
     text-transform: none;
     border-bottom: 0px;
   }
-  table  {
-    td {
-      color: $brown;
-    }
-    tr[data-hook="item_total"] td:last-child strong, #summary-order-total {
+  table tbody {
+    td, #summary-order-total {
       color: $brown;
       font-weight: normal;
       font-size: $base_font_size;
