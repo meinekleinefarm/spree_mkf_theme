@@ -6,11 +6,11 @@ aside#sidebar {
     background: $greyblue url('sidebar-texture.jpg') top left;
     border: solid;
     border-color: $grey;
-    border-width: 3px 3px 3px 3px;
-    -moz-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
-    -webkit-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
-    -o-border-image: url(sidebar-border.png) 3 3 3 3 repeat;
-    border-image: url(sidebar-border.png) 3 3 3 3 repeat;
+    border-width: 3px;
+    -moz-border-image: url(sidebar-border.png) 3 repeat;
+    -webkit-border-image: url(sidebar-border.png) 3 repeat;
+    -o-border-image: url(sidebar-border.png) 3 repeat;
+    border-image: url(sidebar-border.png) 3 repeat;
 
   }
 
