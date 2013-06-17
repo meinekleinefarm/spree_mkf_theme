@@ -15,7 +15,7 @@ aside#sidebar {
   }
 
   #searchwrapper {
-    width: 190px; /*follow your image's size*/
+    position: relative;
     height:34px;/*follow your image's size*/
 
     background-color: #FFF;
@@ -30,6 +30,21 @@ aside#sidebar {
     -o-border-image: url(search-border.png) 3 round;
     border-image: url(search-border.png) 3 fill round;
 
+    @media only screen {
+      @media (min-width: 768px) and (max-width: 979px) {
+        width: 140px;
+      }
+
+      @media (max-width: 767px) {
+        width: 385px;
+      }
+
+      @media (max-width: 480px) {
+        width: 270px;
+      }
+
+    }
+
     form {
       display:inline ;
     }
@@ -43,13 +58,32 @@ aside#sidebar {
     padding: 10px 0px 10px 10px;
     background-color: transparent;
     float:left;
+
+    @media only screen {
+      @media (min-width: 768px) and (max-width: 979px) {
+        width: 95px;
+      }
+
+      @media (max-width: 767px) {
+        width: 335px;
+      }
+
+      @media (max-width: 480px) {
+        width: 220px;
+      }
+
+    }
   }
 
   .searchbox_submit {
     border: 0px;
     background-color: transparent;
-    float: right;
     padding: 8px;
+    position:absolute; /*important*/
+    top:0px;
+    right: 0px;
+    width:20px;
+    height:20px;
   }
 
 
