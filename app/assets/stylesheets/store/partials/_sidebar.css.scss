@@ -14,49 +14,44 @@ aside#sidebar {
 
   }
 
-  form#search_form {
+  #searchwrapper {
+    width: 190px; /*follow your image's size*/
+    height:34px;/*follow your image's size*/
 
-    background-image: url(staples.png);
-    background-repeat: no-repeat;
-    padding-bottom: 35px;
-    margin: 10px 10px 10px;
-    font-family: $ff_regular;
-    font-size: 13px;
-    height: 22px;
+    background-color: #FFF;
+    padding:0px;
+    margin:10px;
 
-    input#keywords {
-      font-family: $ff_base;
-      font-size: 13px;
-      width: 155px;
-      height: 22px;
-      margin: 25px 0px 10px;
-      border: solid;
-      border-color: $brown;
-      border-width: 3px 3px 3px 3px;
-      -moz-border-image: url(search-border.png) 3 round;
-      -webkit-border-image: url(search-border.png) 3 round;
-      -o-border-image: url(search-border.png) 3 round;
-      border-image: url(search-border.png) 3 fill round;
-      padding: 7px 15px 7px;
-      background: white url(search-btn-lupe.png) 97% center no-repeat;
+    border: solid;
+    border-color: $brown;
+    border-width: 3px 3px 3px 3px;
+    -moz-border-image: url(search-border.png) 3 round;
+    -webkit-border-image: url(search-border.png) 3 round;
+    -o-border-image: url(search-border.png) 3 round;
+    border-image: url(search-border.png) 3 fill round;
 
-      @media only screen {
-        @media (min-width: 768px) and (max-width: 979px) {
-          width: 110px;
-        }
-
-        @media (max-width: 767px) {
-          width: 355px;
-        }
-
-        @media (max-width: 480px) {
-          width: 235px;
-        }
-
-      }
-
+    form {
+      display:inline ;
     }
   }
+
+
+
+  #keywords {
+    border:0px;
+    width: 140px;
+    padding: 10px 0px 10px 10px;
+    background-color: transparent;
+    float:left;
+  }
+
+  .searchbox_submit {
+    border: 0px;
+    background-color: transparent;
+    float: right;
+    padding: 8px;
+  }
+
 
   div[data-hook="homepage_sidebar_navigation"], div[data-hook="taxon_sidebar_navigation"] {
     padding: 10px;
