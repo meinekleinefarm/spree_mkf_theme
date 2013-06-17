@@ -41,9 +41,6 @@ figure#logo {
 
   img {
     @media only screen {
-      @media (max-width: 768px) {
-        width: 420px;
-      }
       @media (max-width: 480px) {
         width: 300px;
       }
