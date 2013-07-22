@@ -2,12 +2,12 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_mkf_theme'
-  s.version     = '1.2.2'
+  s.version     = '1.2.3'
   s.summary     = 'Spree commerce theme for meinekleinefarm.org'
   s.description = 'Spree commerce theme for meinekleinefarm.org'
   s.required_ruby_version = '>= 1.8.7'
 
-  s.author    = 'Christoph Bünte'
+  s.author    = 'Christoph Buente'
   s.email     = 'cb@meinekleinefarm.org'
   s.homepage  = 'http://www.meinekleinefarm.org'
 

@@ -2,5 +2,5 @@
   %ul
     %li
       %span="&copy; Meine kleine Farm #{Date.today.year}".html_safe
-    - Spree::Page.footer_links.limit(6).each do |page|
-      %li= link_to page.title, page.slug, :title => page.meta_title
+    - Spree::Page.limit(6).each do |page|
+      %li= link_to page.nav_title, page.path, :title => page.meta_description
