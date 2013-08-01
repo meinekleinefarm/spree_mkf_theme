@@ -3,4 +3,5 @@
     %li
       %span="&copy; Meine kleine Farm #{Date.today.year}".html_safe
     - Spree::Page.limit(6).each do |page|
-      %li= link_to page.nav_title, page.path, :title => page.meta_description
+      - if page.has_context?('footer')
+        %li= link_to page.nav_title, page.path, :title => page.meta_description
