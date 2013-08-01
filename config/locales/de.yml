@@ -1,4 +1,8 @@
 de:
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      pig: "%B %Y"
   home: Shop-Startseite
   taxon_placeholder: "Produktklasse hinzufügen"
   schweine: Schweine
