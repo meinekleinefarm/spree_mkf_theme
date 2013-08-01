@@ -22,6 +22,7 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
                     :name => 'add_schweine_links_to_sidebar_on_product_page',
                     :insert_bottom => '[data-hook="homepage_sidebar_navigation"]',
                     :partial => 'spree/schweine/sidebar',
+                    :original => 'd9d1b3d18721e1c68eeaac898ca006bf8afb176c',
                     :sequence => {
                       :after => 'add_sidebar_to_product_page'
                     })
