@@ -1,7 +1,4 @@
 .nav.center
-  %ul
-    %li
-      %span="&copy; Meine kleine Farm #{Date.today.year}".html_safe
-    - Spree::Page.limit(6).each do |page|
-      - if page.has_context?('footer')
-        %li= link_to page.nav_title, page.path, :title => page.meta_description
+  %div{:style => 'float:left;'}="&copy; Meine kleine Farm #{Date.today.year}".html_safe
+  - @menu_bar = Spree::MenuBar.find_by_name("Footer")
+  = render :partial => "spree/shared/render_menu", :locals => {:menu_bar => @menu_bar}
