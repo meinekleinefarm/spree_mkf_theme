@@ -238,7 +238,7 @@
                                   <strong>Rechnungsadresse:</strong><br />
                                   <%= @order.bill_address.full_name %><br />
                                   <%= @order.bill_address.address1 %><br />
-                                  <%- if @order.bill_address.address2 -%><%= @order.bill_address.address2%><br/><%- end -%>
+                                  <%- unless @order.bill_address.address2.blank? -%><%= @order.bill_address.address2%><br/><%- end -%>
                                   <%= @order.bill_address.zipcode %> <%= @order.bill_address.city %><br />
                                 </td>
                               </tr>
@@ -247,7 +247,7 @@
                                   <strong>Lieferadresse:</strong><br />
                                   <%= @order.shipping_address.full_name %><br />
                                   <%= @order.shipping_address.address1 %><br />
-                                  <%- if @order.shipping_address.address2 -%><%= @order.shipping_address.address2%><br/><%- end -%>
+                                  <%- unless @order.shipping_address.address2.blank -%><%= @order.shipping_address.address2%><br/><%- end -%>
                                   <%= @order.shipping_address.zipcode %> <%= @order.shipping_address.city %><br />
 
                                 </td>
