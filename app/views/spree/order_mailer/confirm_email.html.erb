@@ -247,7 +247,7 @@
                                   <strong>Lieferadresse:</strong><br />
                                   <%= @order.shipping_address.full_name %><br />
                                   <%= @order.shipping_address.address1 %><br />
-                                  <%- unless @order.shipping_address.address2.blank -%><%= @order.shipping_address.address2%><br/><%- end -%>
+                                  <%- unless @order.shipping_address.address2.blank? -%><%= @order.shipping_address.address2%><br/><%- end -%>
                                   <%= @order.shipping_address.zipcode %> <%= @order.shipping_address.city %><br />
 
                                 </td>
