@@ -170,9 +170,7 @@
             <table border="0" cellpadding="0" cellspacing="0" width="600" id="templatePreheader">
               <tr>
                 <td valign="top" class="preheaderContent">
-                  <div style="text-align:center;margin:0;padding:10px 0;background-color:#f7a193;">
-                    Email wird nicht richtig angezeigt? Im <a href="" target="_blank" style="color:#505050;">Browser </a>&ouml;ffnen.
-                  </div>
+                  <div style="text-align:center;margin:0;padding:10px 0;background-color:#f7a193;">&nbsp;</div>
                 </td>
               </tr>
             </table>
@@ -240,9 +238,7 @@
                                   <strong>Rechnungsadresse:</strong><br />
                                   <%= @order.bill_address.full_name %><br />
                                   <%= @order.bill_address.address1 %><br />
-                                  <%- if @order.bill_address.address2 %>
-                                    <%= @order.bill_address.address2%><br/>
-                                  <%- end %>
+                                  <%- if @order.bill_address.address2 -%><%= @order.bill_address.address2%><br/><%- end -%>
                                   <%= @order.bill_address.zipcode %> <%= @order.bill_address.city %><br />
                                 </td>
                               </tr>
@@ -251,9 +247,7 @@
                                   <strong>Lieferadresse:</strong><br />
                                   <%= @order.shipping_address.full_name %><br />
                                   <%= @order.shipping_address.address1 %><br />
-                                  <%- if @order.shipping_address.address2 %>
-                                    <%= @order.shipping_address.address2%><br/>
-                                  <%- end %>
+                                  <%- if @order.shipping_address.address2 -%><%= @order.shipping_address.address2%><br/><%- end -%>
                                   <%= @order.shipping_address.zipcode %> <%= @order.shipping_address.city %><br />
 
                                 </td>
