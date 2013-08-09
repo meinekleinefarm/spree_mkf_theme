@@ -1,26 +1,56 @@
-<%= t('order_mailer.confirm_email.dear_customer', :name => @order.bill_address.full_name) %>,
+<%= t('order_mailer.confirm_email.dear_customer') %>
 
 <%= t('order_mailer.confirm_email.instructions') %>
 
 <%= t('order_mailer.confirm_email.order_summary') %>
+
+Bestellnummer <%=@order.number %>
 ------------------------------------------------------------
 <% @order.line_items.each do |item| %>
-<%= raw(item.variant.options_text) -%> <%= raw(item.variant.product.name) %>
-<%= item.product.container%> / <%= item.product.net_weight %>g
-<%=item.quantity%> x <%= item.variant.display_amount %> = <%= item.display_amount %>
+<%- description_text = "#{item.quantity} x #{raw(item.variant.product.name)} (#{item.product.net_weight}g) #{raw(item.variant.options_text)}" -%>
+<%- price_text =  item.display_amount.to_s -%>
+<%- while ((description_text.size + price_text.size) < 60) do %>
+  <%- description_text << ' ' %>
+<%- end -%>
+<%= description_text%><%=price_text%>
 ------------------------------------------------------------
 <% end %>
-<%= t('order_mailer.confirm_email.subtotal') %> <%= @order.display_item_total %>
-<% @order.adjustments.eligible.each do |adjustment| %>
-<%= raw(adjustment.label) %> <%= adjustment.display_amount %>
+<%-  @order.adjustments.eligible.each do |adjustment| -%>
+  <%- description_text = raw(adjustment.label) -%>
+  <%- price_text =  adjustment.display_amount.to_s -%>
+  <%- while ((description_text.size + price_text.size) < 60) do %>
+    <%- description_text << ' ' %>
+  <%- end -%>
+<%= description_text%><%=price_text%>
 <% end %>
 ============================================================
-<%= t('order_mailer.confirm_email.total') %> <%= @order.display_total %>
+<%- description_text = t('order_mailer.confirm_email.total') -%>
+<%- price_text =  @order.display_total.to_s -%>
+<%- while ((description_text.size + price_text.size) < 60) do %>
+  <%- description_text << ' ' %>
+<%- end -%>
+<%= description_text%><%=price_text%>
 
-Alle Preise inkl. 7% Mwst.
+Zahlungsmethode:
+<%= @order.payments.first.try(:payment_method).try(:name) %>
 
-Du hast per <%= @order.payments.first.try(:payment_method).try(:name) %> bezahlt, danke.
+Rechnungsadresse:
+<%= @order.bill_address.full_name %>
+<%= @order.bill_address.address1 %>
+<%- unless @order.bill_address.address2.blank? -%><%= @order.bill_address.address2%><%- end -%>
+<%= @order.bill_address.zipcode %> <%= @order.bill_address.city %>
+
+
+Lieferadresse:
+<%= @order.shipping_address.full_name %>
+<%= @order.shipping_address.address1 %>
+<%- unless @order.shipping_address.address2.blank? -%><%= @order.shipping_address.address2%><%- end -%>
+<%= @order.shipping_address.zipcode %> <%= @order.shipping_address.city %>
 
 <%= t('order_mailer.confirm_email.thanks').html_safe %>
+
+PS: Bei Vorkasse überweise bitte den Gesamtbetrag unter Angabe der Rechnungsnummer auf folgendes Konto:
+Bank: Triodos Bank | Kontonummer 100 948 7006 | BLZ 500 310 00
+IBAN DE56 5003 1000 1009 4870 06 | SWIFT TRODDEF1XXX
 
 <%= t('order_mailer.signature') %>
