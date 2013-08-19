@@ -43,11 +43,14 @@
           <% if product.on_sale? %>
             <%= hidden_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"),
               1, :class => 'title' %>
-            <%= button_tag :class => 'primary', :id => 'add-to-cart-button', :type => :submit do %>
+            <%= button_tag :class => 'primary add-to-cart-button', :type => :submit do %>
               <%= t(:add_to_cart) %>
             <% end %>
           <% else %>
-            <%= content_tag('strong', t(:out_of_stock)) %>
+            <%= button_tag :class => 'gray add-to-cart-button', :type => :cancel, :disabled => :disabled do %>
+            <%= t(:out_of_stock) %>
+          <% end %>
+
           <% end %>
         </div>
       </div>
