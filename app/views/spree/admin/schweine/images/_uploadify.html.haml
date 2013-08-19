@@ -1,0 +1,37 @@
+- key = Rails.application.config.session_options[:key]
+- content_for :head do
+  :javascript
+
+    //Fetch the CSRF meta tag data
+    var csrf_token = $('meta[name=csrf-token]').attr('content');
+    var csrf_param = $('meta[name=csrf-param]').attr('content');
+
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-Token': csrf_token
+      }
+    });
+
+    var upload_params = {};
+    upload_params[csrf_param]     = csrf_token;
+    upload_params['#{key}']       = '#{cookies[key]}';
+    upload_params['_http_accept'] = 'application/javascript';
+    upload_params['auth_token']   = '#{try_spree_current_user.authentication_token}',
+    upload_params['image[viewable_id]'] = '#{@schwein.id}'
+
+    $(function(){
+      $('#image_attachment').uploadify({
+        'swf'               : '#{asset_path("uploadify.swf") }',
+        'uploader'          : '#{admin_schwein_images_url(@schwein)}',
+        'fileObjName'       : 'image[attachment]',
+        'fileTypeExts'      : '*.png;*.jpg;*.gif;*.jpeg',
+        'fileSizeLimit'     : '4MB',
+        'multi'             : true,
+        'formData'          : upload_params,
+        'auto'              : true,
+        'buttonText'        : 'Schweinefoto',
+        'removeTimeout'     : 2,
+        'progressData'      : 'percentage',
+        'cancelImg'         : '#{asset_path("cancel.png")}',
+      });
+    });

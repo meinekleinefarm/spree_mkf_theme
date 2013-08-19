@@ -6,6 +6,12 @@ module SpreeMkfTheme
 
     config.autoload_paths += %W(#{config.root}/lib)
 
+    # Add the flash path
+    # config.assets.paths << Rails.root.join('app', 'assets', 'flash')
+
+    # Precompile additional assets
+    # config.assets.precompile += %w( .swf )
+
     # use rspec for tests
     config.generators do |g|
       g.test_framework :rspec

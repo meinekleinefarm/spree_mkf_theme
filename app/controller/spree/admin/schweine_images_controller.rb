@@ -1,6 +1,12 @@
 module Spree
   module Admin
     class SchweineImagesController < Spree::Admin::ImagesController
+
+      protect_from_forgery
+      # Allow requests withouth authenticity token
+      skip_before_filter :verify_authenticity_token
+
+
       before_filter :load_data
 
       create.before :set_viewable
@@ -26,8 +32,8 @@ module Spree
           invoke_callbacks(:create, :after)
           flash[:success] = flash_message_for(@object, :successfully_created)
           respond_with(@object) do |format|
-            format.html { redirect_to admin_schwein_images_path(@schwein) }
-            format.js   { redirect_to admin_schwein_images_path(@schwein) }
+            format.html { render :text => 'OK' }
+            format.js   { render :json => 'OK' }
           end
         else
           invoke_callbacks(:create, :fails)
