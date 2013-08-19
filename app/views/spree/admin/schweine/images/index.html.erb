@@ -1,7 +1,9 @@
 <%= render :partial => 'spree/admin/shared/schweine_tabs', :locals => {:current => 'Images'} %>
 
 <% content_for :page_actions do %>
-  <li><%= link_to_with_icon('icon-plus', t(:new_image), new_admin_schwein_image_url(@schwein), :id => 'new_image_link', :class => 'button') %></li>
+  <li><%= button_link_to t(:back_to_schwein), session[:return_to] || edit_admin_schwein_url(@schwein), :icon => 'icon-arrow-left' %></li>
+
+  <li><%= link_to_with_icon('icon-plus', t(:new_image), new_admin_schwein_image_url(@schwein), :id => 'new_image_link2', :class => 'button') %></li>
 <% end %>
 
 <div id="images" data-hook></div>
