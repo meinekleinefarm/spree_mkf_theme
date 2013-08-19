@@ -1,0 +1,7 @@
+<%= t('order_mailer.cancel_email.dear_customer', :name => @order.billing_address.firstname) %>,
+
+<%= t('order_mailer.cancel_email.instructions', :number => @order.number) %>
+
+<%= t('order_mailer.cancel_email.thanks') %>
+
+<%= t('shipment_mailer.signature') %>

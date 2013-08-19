@@ -197,68 +197,16 @@
                       <td valign="top" class="bodyContent">
                         <div class="intro-section"  style="padding:0px; #cccccc; padding-bottom:20px; background-image:url('http://gallery.mailchimp.com/acf7def2835785a77a887ff5d/images/tile_paper_texture_white.jpg');" >
                           <img align="left" alt="" border="0" height="280" width="600" src="http://gallery.mailchimp.com/acf7def2835785a77a887ff5d/images/rennschwein.png" style="max-width:600px;margin-bottom:10px;margin-top:10px;" >
-                          <h1 class="headline_variation_2" style="padding-left:20px;padding-bottom:0;margin-bottom:5px;margin-top:5px;" >Vielen Dank f&uuml;r Deine Bestellung!</h1>
+                          <h1 class="headline_variation_2" style="padding-left:20px;padding-bottom:0;margin-bottom:5px;margin-top:5px;" >Deine Stornierung</h1>
                           <div style="padding-left:20px;padding-right:20px;">
-                            <p>Deine Wurst ist schon bald auf dem Weg zu Dir. Sobald Dein Wurstgeld bei uns angekommen ist – ob per Paypal oder Voraus&uuml;berweisung – machen wir uns an die Versandarbeit. Du bekommst dann eine Mail mit Sendungsverfolgungs-Link.</p>
-                            <p>Hier siehst Du noch einmal, was Du bestellt hast.</p>
-                            <table id="Bestellinfo" width="510" style="margin:25px;">
-                              <tr>
-                                <td style="border-bottom:solid 1px #452500; font-weight:bold;" colspan="2" >Bestellnummer <%=@order.number%></td>
-                              </tr>
-                              <% @order.line_items.each do |item| %>
-                                <tr>
-                                  <td><%=item.quantity%> x <%= raw(item.variant.product.name) %> (<%= item.product.net_weight %>g) <%= raw(item.variant.options_text) -%></td>
+                            <p>hiermit bestätigen wir Dir die Stornierung Deiner Bestellung <%=@order.number%>.</p>
+                            <p>Vielleicht ein anderes Mal?</p>
 
-
-                                  <td align="right"><%= item.display_amount %></td>
-                                </tr>
-                              <%- end %>
-                              <% @order.adjustments.eligible.each do |adjustment| %>
-                                <tr>
-                                  <td><%= raw(adjustment.label) %></td>
-                                  <td align="right"><%= adjustment.display_amount %></td>
-                                </tr>
-                              <% end %>
-                              <tr style="font-weight:bold;">
-                                <td style="border-bottom:solid 3px #452500; border-top:solid 1px #452500;">Summe</td>
-                                <td align="right"  style="border-bottom:solid 3px #452500; border-top:solid 1px #452500;"><%= @order.display_total %></td>
-                              </tr>
-                              <tr>
-                                <td colspan="2" valign="bottom" height="80">
-                                  <strong>Zahlungsmethode:</strong><br />
-                                  <%= @order.payments.first.try(:payment_method).try(:name) %>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td colspan="2" valign="bottom" height="120">
-                                  <strong>Rechnungsadresse:</strong><br />
-                                  <%= @order.bill_address.full_name %><br />
-                                  <%= @order.bill_address.address1 %><br />
-                                  <%- unless @order.bill_address.address2.blank? -%><%= @order.bill_address.address2%><br/><%- end -%>
-                                  <%= @order.bill_address.zipcode %> <%= @order.bill_address.city %><br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td colspan="2" valign="bottom" height="120">
-                                  <strong>Lieferadresse:</strong><br />
-                                  <%= @order.shipping_address.full_name %><br />
-                                  <%= @order.shipping_address.address1 %><br />
-                                  <%- unless @order.shipping_address.address2.blank? -%><%= @order.shipping_address.address2%><br/><%- end -%>
-                                  <%= @order.shipping_address.zipcode %> <%= @order.shipping_address.city %><br />
-
-                                </td>
-                              </tr>
-                            </table>
                             <p>
-                              Danke f&uuml;r Deine Wursttreue und oink!
+                              Schöne Grüße!
                             </p>
                             <p>
-                              Dennis Buchmann<br />
-                              Chefschwein bei MeinekleineFarm.org
-                            </p>
-                            <p><br />
-                              PS: Bei Vorkasse &uuml;berweise bitte den Gesamtbetrag unter Angabe der Rechnungsnummer auf folgendes Konto:<br />Bank: Triodos Bank | Kontonummer 100 948 7006 | BLZ 500 310 00 <br />
-                              IBAN DE56 5003 1000 1009 4870 06 | SWIFT TRODDEF1XXX
+                              Dennis und die anderen Schweine von MeinekleineFarm.org
                             </p>
                           </div>
                         </div>

@@ -10,6 +10,11 @@ de:
   date_of_birth: Geboren
 
   order_mailer:
+    cancel_email:
+      dear_customer: "Hallo %{name}"
+      instructions: "hiermit bestätigen wir Dir die Stornierung Deiner Bestellung %{number}.\n\nVielleicht ein anderes Mal?"
+      subject: "Deine Stornierung"
+      thanks: "Schöne Grüße!\n\nDennis und die anderen Schweine von MeinekleineFarm.org"
     confirm_email:
       dear_customer: "Vielen Dank für deine Bestellung!"
       instructions: "Deine Wurst ist schon bald auf dem Weg zu Dir. Sobald Dein Wurstgeld bei uns angekommen ist – ob per Paypal oder Vorausüberweisung – machen wir uns an die Versandarbeit. Du bekommst dann eine Mail mit Sendungsverfolgungs-Link."
@@ -22,8 +27,8 @@ de:
   shipment_mailer:
     shipped_email:
       dear_customer: "Hallo %{name}"
-      instructions: "Deine Wurst ist auf dem Weg zu Dir. Hier der Link zur Sendungsverfolgung Deiner Bestellung %{number}. Falls der Link noch nicht aktiv ist, bitte ein bisschen gedulden."
-      track_information: "DHL Tracking Nummer: %{tracking}"
+      instructions: "Deine Wurst ist auf dem Weg zu Dir. Hier ist der Link zur Sendungsverfolgung Deiner Bestellung %{number}: %{tracking}"
+      track_information: "Falls der Link noch nicht aktiv ist, bitte ein bisschen gedulden."
       thanks: "BewuRste Mahlzeit wünschen wir!\n\nDennis und die anderen Schweine von MeinekleineFarm.org"
       subject: "Wurst ist unterwegs!"
     signature: "-- \nMeinekleineFarm.org UG (haftungsbeschränkt)\nRegistergericht: Berlin Charlottenburg, HRB 139635 B\nGeschäftsführer (Chefschwein): Dennis Buchmann\nTelefon +49 176 23236620\nJonasstr. 25\n12053 Berlin"
