@@ -1,9 +1,7 @@
 <nav id="taxonomies" class="sidebar-item">
   <h6 class="taxonomy-root">Schweine</h6>
   <ul class="taxons-list">
-    <li>
-      <%= link_to("Alle Schweine", schweine_path) %>
-    </li>
+    <li><%= link_to("Alle Schweine", schweine_path) %></li>
     <%- Spree::Schwein.limit(5).order('created_at DESC').each do |schwein| %>
       <li><%=link_to schwein.name, schwein_path(schwein.permalink)%></li>
     <% end %>
