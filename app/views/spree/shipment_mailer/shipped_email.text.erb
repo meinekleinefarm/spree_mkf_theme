@@ -2,7 +2,7 @@
 
 <%= t('shipment_mailer.shipped_email.instructions', :number => @shipment.order.number, :tracking => "http://nolp.dhl.de/nextt-online-public/set_identcodes.do?lang=#{I18n.locale}&idc=#{@shipment.tracking}") %>
 
-<%= t('shipment_mailer.shipped_email.track_information' %>
+<%= t('shipment_mailer.shipped_email.track_information') %>
 
 <%= t('shipment_mailer.shipped_email.thanks').html_safe %>
 
