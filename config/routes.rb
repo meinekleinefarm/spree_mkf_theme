@@ -2,6 +2,9 @@ Spree::Core::Engine.routes.append do
 
   namespace :admin do
     resources :schweine do
+      collection do
+        post :update_positions
+      end
 
       resources :images, :controller => 'schweine_images' do
         collection do

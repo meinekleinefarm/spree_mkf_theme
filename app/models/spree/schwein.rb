@@ -1,6 +1,8 @@
 module Spree
   class Schwein < ActiveRecord::Base
 
+    acts_as_list
+
     paginates_per 24
 
     attr_accessible :name, :description, :meta_keywords, :meta_description, :weight, :date_of_birth, :date_of_death, :permalink
