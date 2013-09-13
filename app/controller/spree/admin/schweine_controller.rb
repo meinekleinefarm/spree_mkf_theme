@@ -10,6 +10,6 @@ private
     params[:q] ||= {}
 
     @search = Spree::Schwein.ransack(params[:q])
-    @collection = @search.result.page(params[:page]).per(params[:per_page])
+    @collection = @search.result.order('position ASC').page(params[:page]).per(params[:per_page])
   end
 end
