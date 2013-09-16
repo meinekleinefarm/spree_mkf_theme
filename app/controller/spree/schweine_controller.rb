@@ -5,7 +5,7 @@ class Spree::SchweineController < Spree::StoreController
   respond_to :html
 
   def index
-    @schweine = Spree::Schwein.order('position ASC').page(params[:page])
+    @collection = Spree::Schwein.order('position ASC').page(params[:page])
   end
 
   def show

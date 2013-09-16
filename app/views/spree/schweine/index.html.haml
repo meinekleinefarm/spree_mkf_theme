@@ -4,7 +4,9 @@
 
 %div{ 'data-hook' => "homepage_products" }
   %ul#schweine.inline.product-listing.row
-    = render :partial => 'schwein', :collection => @schweine
+    = render :partial => 'schwein', :collection => @collection
+
+= paginate @collection
 
 - content_for :sidebar do
   %div{'data-hook' => "homepage_sidebar_navigation"}
