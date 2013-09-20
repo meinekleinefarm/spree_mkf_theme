@@ -1,5 +1,5 @@
 <% content_for :page_actions do %>
-  <li><%= button_link_to t(:back_to_schweine_list), session[:return_to] || admin_schweine_url, :icon => 'icon-arrow-left' %></li>
+  <li><%= button_link_to t(:back_to_schweine_list), admin_schweine_url, :icon => 'icon-arrow-left' %></li>
   <li id="new_schwein_link">
     <%= button_link_to t(:new_schwein), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_schwein' } %>
   </li>
