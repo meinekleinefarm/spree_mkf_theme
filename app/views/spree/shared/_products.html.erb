@@ -12,7 +12,7 @@
 <ul id="products" class="inline product-listing row" data-hook>
   <% products.each_with_index do |product, i| %>
     <% if product.on_display? %>
-      <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha row", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+      <li id="product<%= product.id %>" class="columns four product <%= cycle("alpha row", "secondary", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
         <div class="product-image">
           <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
         </div>
@@ -21,7 +21,7 @@
         <span class="props" itemprop="weight"><%= number_to_weight(product.net_weight) %></span>
         <span class="props last" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
         <div class="clear"/>
-        <p class="description"><%= truncate(strip_tags(product.description), :length => 140).html_safe %></p>
+        <p class="description"><%= truncate(strip_tags(product.description), :length => 140).to_s.html_safe %></p>
 
         <div id="cart-form" data-hook="cart_form">
           <%= render :partial => 'spree/products/index_cart_form', :locals => {:product => product} %>
