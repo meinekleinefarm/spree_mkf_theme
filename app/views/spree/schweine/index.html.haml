@@ -2,8 +2,6 @@
   .intro
     = render 'spree/shared/content', :content => current_page.for_context('intro').first
 
-= paginate @collection
-
 %div{ 'data-hook' => "homepage_products" }
   %ul#schweine.inline.product-listing.row
     = render :partial => 'schwein', :collection => @collection

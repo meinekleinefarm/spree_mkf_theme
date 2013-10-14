@@ -52,6 +52,8 @@
 <div id="new_schwein" data-hook></div>
 
 <% if @collection.any? %>
+  <%= paginate @collection %>
+
   <table class="index sortable" id="listing_schweine" data-sortable-link="<%= update_positions_admin_schweine_url %>">
     <colgroup>
        <col style="width: 7%;">
