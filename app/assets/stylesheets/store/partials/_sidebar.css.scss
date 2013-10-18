@@ -1,6 +1,6 @@
 aside#sidebar {
   font-family: $ff_regular;
-  font-size: 13px;
+  font-size: 14px;
 
   #sidebar_wrapper {
     background: $greyblue url('sidebar-texture.jpg') top left;
@@ -112,14 +112,14 @@ aside#sidebar {
 
 nav#taxonomies {
 
-  font-size: 13px;
+  font-size: 14px;
 
   h6.taxonomy-root {
     font-size: 140%;
     text-transform: none;
     font-family: $ff_regular;
     font-weight:normal;
-    padding-top: 12px;
+    padding-top: 14px;
     margin-bottom: 0px;
     border: solid;
     border-color: $brown;
@@ -131,7 +131,7 @@ nav#taxonomies {
   }
 
   .taxons-list li a {
-    font-size: 13px;
+    font-size: 14px;
     font-family: $ff_base;
     &:hover {
       text-decoration: underline;
