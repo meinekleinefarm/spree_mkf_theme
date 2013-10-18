@@ -10,10 +10,10 @@
     %span.addition=link_to 'alle Produkte ...', products_path, style: 'font-size:50%;text-decoration:underline;padding-left: 3%'
   = render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon }
 
-  - if defined?(Spree::Blog)
+  - if defined?(SpreeEssentialBlog)  == 'constant' && Spree::Post.live.count > 0
     %h2
       Schweinenews
-    = render :partial => 'spree/blogs/shared/preview', :collection => Spree::Post.limit(3), :as => :post
+    = render :partial => 'spree/blogs/shared/preview', :collection => @blog.posts.live.limit(3), :as => :post
 
 - content_for :teaser do
   .sixteen.columns.omega.teaser{style: 'margin-bottom: 10px'}

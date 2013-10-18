@@ -14,11 +14,11 @@
   </ul>
 </nav>
 
-<%- if defined?(Spree::Post) %>
+<%- if defined?(SpreeEssentialBlog)  == 'constant' && Spree::Post.live.count > 0 %>
   <nav id="taxonomies" class="sidebar-item">
     <h6 class="taxonomy-root">Schweinenews</h6>
     <% @blog = Spree::Blog.first %>
-    <%= render :partial => "spree/blogs/shared/archive", :locals => { :posts => Spree::Post.limit(5) } %>
+    <%= render :partial => "spree/blogs/shared/archive", :locals => { :posts => @blog.posts.live.limit(5) } %>
   </nav>
 <%- end -%>
 
