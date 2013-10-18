@@ -14,6 +14,14 @@
   </ul>
 </nav>
 
+<%- if defined?(Spree::Post) %>
+  <nav id="taxonomies" class="sidebar-item">
+    <h6 class="taxonomy-root">Schweinenews</h6>
+    <% @blog = Spree::Blog.first %>
+    <%= render :partial => "spree/blogs/shared/archive", :locals => { :posts => Spree::Post.limit(5) } %>
+  </nav>
+<%- end -%>
+
 <%- if @bauern_menu = Spree::MenuBar.find_by_name("Bauern") %>
   <nav id="taxonomies" class="sidebar-item">
     <h6 class="taxonomy-root">Bauern</h6>
