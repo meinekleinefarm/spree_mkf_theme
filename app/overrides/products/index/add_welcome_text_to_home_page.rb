@@ -1,7 +1,7 @@
 # encoding: UTF-8
-Deface::Override.new(:virtual_path => 'spree/home/index',
+Deface::Override.new(:virtual_path => 'spree/products/index',
                     :name => 'add_welcome_text_to_home_page',
                     :insert_before => '[data-hook="homepage_products"]',
-                    :text => '<h2>Alle Leckereien aus Schwein</h2><p>Oben links auf das aktuellste Schwein klicken, um seine Wurst zu bestellen (Schwarzweißschweine wurden bereits geschlachtet). Weiter unten ist auch sofort lieferbare Wurst vom sogenannten Schwein x zu haben. Alles ausverkauft? Gerne nehme ich Nachfragen oder Vorbestellung per Mail entgegen.</p>')
+                    :text => '<h2>Hier gibt´s lecker Wurst mit Gesicht.</h2><p> Falls die Sorte Deiner Wahl ausverkauft ist: Mit dem <a href="http://eepurl.com/h6YTQ" target="_blank">Schweine-Newsletter</a> informieren wir über Wurst- und andere Neuigkeiten.</p>')
 
 
