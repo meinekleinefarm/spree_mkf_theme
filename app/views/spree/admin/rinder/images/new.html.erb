@@ -1,0 +1,24 @@
+<% content_for :page_title do %>
+  <%= t(:editing_rind) %> &ldquo;<%= @rind.name %>&rdquo;
+<% end %>
+
+<% content_for :page_actions do %>
+  <li><%= button_link_to t(:back_to_images), admin_rind_images_path(@rind), :icon => 'icon-arrow-left' %></li>
+<% end %>
+
+
+<%= form_for [:admin, @rind, @image], :url => admin_rind_images_path(@rind, @image), :html => { :multipart => true } do |f| %>
+  <fieldset data-hook="new_image">
+    <legend align="center"><%= t(:new_image) %></legend>
+
+      <%= render :partial => 'spree/admin/rinder/images/form', :locals => { :f => f } %>
+
+      <div class="form-buttons filter-actions actions" data-hook="buttons">
+        <%= button t(:update), 'icon-refresh' %>
+        <span class="or"><%= t(:or) %></span>
+        <%= link_to_with_icon 'icon-remove', t(:cancel), admin_rind_images_url(@rind), :id => 'cancel_link', :class => 'button' %>
+      </div>
+  </fieldset>
+<% end %>
+
+<%= javascript_include_tag 'admin/images/new.js' %>

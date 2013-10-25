@@ -1,0 +1,16 @@
+<% content_for :page_actions do %>
+  <li><%= button_link_to t(:back_to_rinder_list), admin_rinder_url, :icon => 'icon-arrow-left' %></li>
+  <li id="new_rind_link">
+    <%= button_link_to t(:new_rind), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_rind' } %>
+  </li>
+<% end %>
+
+<%= render :partial => 'spree/admin/shared/rinder_tabs', :locals => { :current => 'Rinder Details' } %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @rind } %>
+
+<%= form_for [:admin, @rind], :method => :put, :html => { :multipart => true } do |f| %>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+  </fieldset>
+<% end %>

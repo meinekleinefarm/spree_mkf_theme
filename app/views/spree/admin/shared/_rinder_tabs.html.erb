@@ -1,0 +1,21 @@
+<% content_for :page_title do %>
+  <%= t(:editing_rind) %> &ldquo;<%= @rind.name %>&rdquo;
+<% end %>
+
+<% content_for :sidebar_title do %>
+  <span class="sku"><%= @rind.name %></span>
+<% end %>
+
+<% content_for :sidebar do %>
+  <nav class="menu">
+    <ul data-hook="admin_rind_tabs">
+      <li<%== ' class="active"' if current == 'rind Details' %>>
+        <%= link_to_with_icon 'icon-edit', t(:rind_details), edit_admin_schwein_url(@rind) %>
+      </li>
+      <li<%== ' class="active"' if current == 'Images' %>>
+        <%= link_to_with_icon 'icon-picture', t(:images), admin_rind_images_url(@rind) %>
+      </li>
+    </ul>
+  </nav>
+
+<% end %>

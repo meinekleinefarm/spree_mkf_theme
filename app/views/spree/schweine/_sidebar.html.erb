@@ -14,6 +14,18 @@
   </ul>
 </nav>
 
+<% if Spree::Rind.count > 0 %>
+  <nav id="taxonomies" class="sidebar-item">
+    <h6 class="taxonomy-root">Rinder</h6>
+    <ul class="taxons-list">
+      <li><%= link_to("Alle Rinder", rinder_path) %></li>
+      <%- Spree::Rind.limit(5).order('created_at DESC').each do |rind| %>
+        <li><%=link_to rind.name, rind_path(rind.permalink)%></li>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>
+
 <%- if defined?(SpreeEssentialBlog)  == 'constant' && Spree::Post.live.count > 0 %>
   <nav id="taxonomies" class="sidebar-item">
     <h6 class="taxonomy-root">Schweinenews</h6>

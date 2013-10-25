@@ -8,6 +8,7 @@ de:
   schweine: Schweine
   date_of_death: Geschlachtet
   date_of_birth: Geboren
+  race: Rasse
 
   order_mailer:
     cancel_email:

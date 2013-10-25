@@ -1,0 +1,10 @@
+%li.columns.four.row{:id => dom_id(rind), :class => cycle('alpha', '', 'omega')}
+  .schwein
+    .product-image
+      = link_to(small_image(rind, :width => '100%'), rind_path(rind.permalink))
+    %h4= link_to rind.name, rind_path(rind.permalink)
+    %span.props
+      = number_to_human(rind.weight, :units => {:unit => "kg", :thousand => "t"}, :significant => true, :precision => 5)
+    %span.props.last
+      &dagger;
+      = l(rind.date_of_death, :format => :default)

@@ -1,0 +1,51 @@
+<div data-hook="product_show" itemscope itemtype="http://schema.org/Rind">
+  <h1>
+    <%= @rind.name %>
+  </h1>
+
+  <div class="p">
+    <%= render :partial => 'rinder_properties' %>
+  </div>
+
+  <% @body_id = 'rind-details' %>
+
+  <div class="columns twelve alpha" data-hook="rind_left_part">
+    <div class="row" data-hook="rind_left_part_wrap">
+
+      <div id="product-images" data-hook="product_images">
+        <div id="main-image" data-hook class="columns eight alpha">
+          <%= render :partial => 'spree/rinder/image', :object => @rind.images.first %>
+        </div>
+        <div id="thumbnails" data-hook class="columns four omega">
+          <%= render :partial => 'thumbnails' %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="columns twelve omega" data-hook="rind_right_part">
+    <div class="row" data-hook="rind_right_part_wrap">
+
+      <div id="rind-description" data-hook="rind_description">
+
+        <div itemprop="description" data-hook="description">
+          <%= product_description(@rind) rescue t(:rind_has_no_description) %>
+        </div>
+
+        <h3>Produkte von diesem Rind kaufen</h3>
+        <%- @variant_name = @rind.name %>
+        <%= render :partial => 'spree/shared/products', :locals => { :products => @rind.products } %>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/schweine/sidebar' %>
+    <%= render :partial => 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
