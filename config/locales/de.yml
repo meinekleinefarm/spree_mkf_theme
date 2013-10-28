@@ -11,7 +11,7 @@ de:
   race: Rasse
   errors:
     messages:
-      no_shipping_methods_available: "In dieses Land ist noch keine Lieferung möglich. Bitte wählen Sie ein anderes Land aus."
+      no_shipping_methods_available: "In dieses Land ist noch keine Lieferung möglich. Bitte nutzen Sie das <a href='/contact-us' style='color:black'>Kontaktformular</a> für Ihre Bestellung."
   errors_prohibited_this_record_from_being_saved:
     one: "1 Fehler ist aufgetreten"
     other: "%{count} Fehler sind aufgetreten"
