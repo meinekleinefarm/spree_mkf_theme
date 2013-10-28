@@ -1,10 +1,9 @@
 %li.columns.four.row{:id => dom_id(schwein), :class => cycle('alpha', '', 'omega')}
   .schwein
     .product-image
-      = link_to(small_image(schwein, :width => '100%'), schwein_path(schwein.permalink))
-    %h4= link_to schwein.name, schwein_path(schwein.permalink)
+      = link_to_unless(schwein.permalink.blank?, small_image(schwein, :width => '100%'), schwein_path(schwein.permalink))
+    %h4= link_to_unless(schwein.permalink.blank?, schwein.name, schwein_path(schwein.permalink))
     %span.props
       = number_to_human(schwein.weight, :units => {:unit => "kg", :thousand => "t"}, :significant => true, :precision => 5)
     %span.props.last
-      &dagger;
-      = l(schwein.date_of_death, :format => :default)
+      = ("&dagger;" + l(schwein.date_of_death, :format => :default)).html_safe rescue nil

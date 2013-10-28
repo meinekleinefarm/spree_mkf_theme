@@ -9,7 +9,7 @@
   <ul class="taxons-list">
     <li><%= link_to("Alle Schweine", schweine_path) %></li>
     <%- Spree::Schwein.limit(5).order('created_at DESC').each do |schwein| %>
-      <li><%=link_to schwein.name, schwein_path(schwein.permalink)%></li>
+      <li><%=link_to_unless schwein.permalink.blank?, schwein.name, schwein_path(schwein.permalink)%></li>
     <% end %>
   </ul>
 </nav>
