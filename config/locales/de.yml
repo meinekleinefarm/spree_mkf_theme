@@ -9,6 +9,12 @@ de:
   date_of_death: Geschlachtet
   date_of_birth: Geboren
   race: Rasse
+  errors:
+    messages:
+      no_shipping_methods_available: "In dieses Land ist noch keine Lieferung möglich. Bitte wählen Sie ein anderes Land aus."
+  errors_prohibited_this_record_from_being_saved:
+    one: "1 Fehler ist aufgetreten"
+    other: "%{count} Fehler sind aufgetreten"
 
   order_mailer:
     cancel_email:
