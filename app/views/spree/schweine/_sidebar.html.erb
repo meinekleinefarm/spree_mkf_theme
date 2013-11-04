@@ -30,7 +30,7 @@
   <nav id="taxonomies" class="sidebar-item">
     <h6 class="taxonomy-root">Schweinenews</h6>
     <% @blog = Spree::Blog.first %>
-    <%= render :partial => "spree/blogs/shared/archive", :locals => { :posts => @blog.posts.live.limit(5) } %>
+    <%= render :partial => "spree/blogs/shared/archive", :locals => { :posts => @blog.posts.live.limit(5).order('posted_at DESC') } %>
   </nav>
 <%- end -%>
 

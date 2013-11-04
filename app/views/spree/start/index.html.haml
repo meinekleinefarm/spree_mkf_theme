@@ -13,7 +13,7 @@
   - if defined?(SpreeEssentialBlog)  == 'constant' && Spree::Post.live.count > 0
     %h2
       Schweinenews
-    = render :partial => 'spree/blogs/shared/preview', :collection => @blog.posts.live.limit(3), :as => :post
+    = render :partial => 'spree/blogs/shared/preview', :collection => @blog.posts.live.limit(3).order('posted_at DESC'), :as => :post
 
 - content_for :teaser do
   .sixteen.columns.omega.teaser{style: 'margin-bottom: 10px'}
