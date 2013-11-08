@@ -36,6 +36,12 @@ p {
   height: auto;
 }
 
+table.order-summary {
+  thead {
+    background-color: $yellow;
+  }
+}
+
 #wrapper {
 
   position: relative;
