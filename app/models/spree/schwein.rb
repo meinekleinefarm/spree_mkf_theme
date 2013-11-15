@@ -21,7 +21,12 @@ module Spree
     end
 
     def products
-      Spree::OptionValue.find_by_presentation(self.name).variants.active.where('count_on_hand > 0').map(&:product).uniq rescue []
+      p = Spree::OptionValue.find_by_presentation(self.name).variants.active.where('count_on_hand > 0').map(&:product).uniq rescue []
+      p + misc_products
+    end
+
+    def misc_products
+      Spree::Taxon.find_by_name("Sonstiges").products.active.available
     end
 
     def ensure_option_value_exist

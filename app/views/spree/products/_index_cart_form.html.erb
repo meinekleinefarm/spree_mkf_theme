@@ -40,7 +40,7 @@
       <div data-hook="product_price" class="<% if !product.has_variants? %> alpha <% else %> omega <% end %>">
 
         <div class="add-to-cart">
-          <% if product.on_sale? %>
+          <% if product.on_sale? or product.on_demand? %>
             <%= hidden_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"),
               1, :class => 'title' %>
             <%= button_tag :class => 'primary add-to-cart-button', :type => :submit do %>
