@@ -5,14 +5,14 @@
       <b>
         Geboren:
       </b>
-      <%= l(@schwein.date_of_birth, :format => :pig) %>
+      <%= l(@schwein.date_of_birth, :format => :pig) rescue nil %>
   </span>
   |
   <span class="weight">
       <b>
         Geschlachtet:
       </b>
-      <%= l(@schwein.date_of_death) %>
+      <%= l(@schwein.date_of_death) rescue nil %>
   </span>
 </div>
 <div class="right"></div>
