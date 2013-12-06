@@ -21,3 +21,13 @@ $(function() {
     }
   }]).listen();
 });
+
+$(document).ready(function() {
+  $("#page img").each(function() {
+    // Let's put a caption if there is one
+    $(this).wrap('<figure class="image"></figure>')
+    if($(this).attr("alt")) {
+      $(this).after('<figcaption>' + $(this).attr("alt") + '</figcaption>');
+    }
+  });
+});
