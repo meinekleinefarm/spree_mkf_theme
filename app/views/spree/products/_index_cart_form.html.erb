@@ -9,6 +9,8 @@
             next unless v.in_stock || Spree::Config[:allow_backorders]
             next if !@variant_name.nil? && v.option_values.where(:presentation => @variant_name).empty? %>
             <input type="hidden" name="products[<%=product.id %>]" value="<%= v.id %>" />
+            <%= content_tag(:meta, '', itemprop: 'price', content: v.price) %>
+            <meta itemprop="availability" content="http://schema.org/LimitedAvailability">
             <% break %>
           <% end %>
         <%- else -%>
@@ -47,6 +49,7 @@
               <%= t(:add_to_cart) %>
             <% end %>
           <% else %>
+            <%= content_tag(:meta, '', itemprop: 'availability', content: 'http://schema.org/OutOfStock') %>
             <%= button_tag :class => 'gray add-to-cart-button', :type => :cancel, :disabled => :disabled do %>
             <%= t(:out_of_stock) %>
           <% end %>
