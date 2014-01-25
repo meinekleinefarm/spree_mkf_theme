@@ -25,6 +25,14 @@ module Spree
         end
       end
 
+      def edit
+        invoke_callbacks(:edit_action, :before)
+        respond_with(@object) do |format|
+          format.html { render :layout => !request.xhr?, :template => 'spree/admin/rinder/images/edit' }
+          format.js   { render :layout => false, :template => 'spree/admin/rinder/images/edit' }
+        end
+      end
+
       def create
         invoke_callbacks(:create, :before)
         @object.attributes = params[object_name]
