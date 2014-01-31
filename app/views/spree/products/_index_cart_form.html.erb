@@ -9,8 +9,8 @@
             next unless v.in_stock || Spree::Config[:allow_backorders]
             next if !@variant_name.nil? && v.option_values.where(:presentation => @variant_name).empty? %>
             <input type="hidden" name="products[<%=product.id %>]" value="<%= v.id %>" />
-            <%= content_tag(:meta, '', itemprop: 'price', content: v.price) %>
-            <%= content_tag(:meta, '', itemprop: 'priceCurrency', content: 'EUR') %>
+            <%= content_tag(:meta, '', itemprop: 'price', content: price_with_precision(v.price, precision: 2)) %>
+            <meta itemprop="priceCurrency" content="EUR">
             <meta itemprop="availability" content="http://schema.org/LimitedAvailability">
             <% break %>
           <% end %>
