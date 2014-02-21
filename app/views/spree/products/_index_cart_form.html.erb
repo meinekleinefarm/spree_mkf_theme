@@ -50,7 +50,9 @@
               <%= t(:add_to_cart) %>
             <% end %>
           <% else %>
-            <%= content_tag(:meta, '', itemprop: 'availability', content: 'http://schema.org/OutOfStock') %>
+            <%= content_tag(:meta, '', itemprop: 'price', content: number_with_precision(product.price, precision: 2)) %>
+            <meta itemprop="priceCurrency" content="EUR">
+            <meta itemprop="availability" content="http://schema.org/OutOfStock">
             <%= button_tag :class => 'gray add-to-cart-button', :type => :cancel, :disabled => :disabled do %>
             <%= t(:out_of_stock) %>
           <% end %>

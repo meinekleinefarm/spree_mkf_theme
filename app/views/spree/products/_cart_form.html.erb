@@ -43,6 +43,8 @@
             <% end %>
           <% else %>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <%= content_tag(:meta, '', itemprop: 'price', content: number_with_precision(@product.price, precision: 2)) %>
+              <meta itemprop="priceCurrency" content="EUR">
               <strong itemprop="availability" itemtype="http://schema.org/OutOfStock" >
                 <%= t(:out_of_stock) %>
               </strong>
