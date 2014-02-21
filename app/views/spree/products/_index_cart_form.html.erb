@@ -43,6 +43,9 @@
       <div data-hook="product_price" class="<% if !product.has_variants? %> alpha <% else %> omega <% end %>">
 
         <div class="add-to-cart">
+          <%= content_tag(:meta, '', itemprop: 'price', content: number_with_precision(product.price, precision: 2)) %>
+          <meta itemprop="priceCurrency" content="EUR">
+          <meta itemprop="availability" content="http://schema.org/OutOfStock">
           <% if product.on_sale? or product.on_demand? %>
             <%= hidden_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"),
               1, :class => 'title' %>
@@ -50,9 +53,6 @@
               <%= t(:add_to_cart) %>
             <% end %>
           <% else %>
-            <%= content_tag(:meta, '', itemprop: 'price', content: number_with_precision(product.price, precision: 2)) %>
-            <meta itemprop="priceCurrency" content="EUR">
-            <meta itemprop="availability" content="http://schema.org/OutOfStock">
             <%= button_tag :class => 'gray add-to-cart-button', :type => :cancel, :disabled => :disabled do %>
             <%= t(:out_of_stock) %>
           <% end %>
