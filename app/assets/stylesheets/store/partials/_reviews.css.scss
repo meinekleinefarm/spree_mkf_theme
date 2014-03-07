@@ -57,5 +57,9 @@ h6.product-section-title {
   .ratings {
     line-height: 45px;
   }
+
+  div.star-rating-on a {
+    background-position: 0 -32px!important;;
+  }
 }
 
