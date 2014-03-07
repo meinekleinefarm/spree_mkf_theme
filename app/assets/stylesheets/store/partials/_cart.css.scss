@@ -113,3 +113,13 @@ table#cart-detail {
 
   }
 }
+
+.gift-code-field {
+  input {
+    margin: 10px;
+
+    &[type="submit"] {
+      vertical-align: baseline;
+    }
+  }
+}
