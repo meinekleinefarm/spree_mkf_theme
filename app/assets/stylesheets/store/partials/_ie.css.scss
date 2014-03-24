@@ -1,0 +1,11 @@
+.ie {
+  #checkout_form_address, #checkout_form_delivery, #checkout_form_payment, #order_summary, #checkout_form_confirm, #cart-form {
+    input.radio {
+      border: none;
+      padding: 5px;
+      margin-right: 4px;
+      background-color: $beige;
+    }
+  }
+}
+

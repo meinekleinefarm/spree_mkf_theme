@@ -6,7 +6,7 @@ a.button, button, input[type="submit"], .add-to-cart-button {
   cursor: pointer;
   font-size:14px;
   font-family: Tahoma,Arial,sans-serif;
-  font-weight:normal;
+  font-weight: normal;
   text-decoration: none;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
   -webkit-font-smoothing: antialiased;
@@ -18,11 +18,9 @@ a.button, button, input[type="submit"], .add-to-cart-button {
   background-image: -o-linear-gradient(top, #fdeeec, #f08574);
   background-image: linear-gradient(top, #fdeeec, f08574);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdeeec', endColorstr='#f08574', GradientType=0);
   border: 1px solid #CCC;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -69,6 +67,7 @@ a.button, button, input[type="submit"], .add-to-cart-button {
     background-image: -webkit-linear-gradient(top, #fdeeec, #f7a193);
     background-image: -o-linear-gradient(top, #fdeeec, #f7a193);
     background-image: linear-gradient(top, #fdeeec, f7a193);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdeeec', endColorstr='#f7a193', GradientType=0);
     background-repeat: repeat-x;
     border-color:$pink;
     color: inherit;
@@ -86,6 +85,7 @@ a.button, button, input[type="submit"], .add-to-cart-button {
     background-image: -webkit-linear-gradient(top, #fdeeec, #f08574);
     background-image: -o-linear-gradient(top, #fdeeec, #f08574);
     background-image: linear-gradient(top, #fdeeec, f08574);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdeeec', endColorstr='#f08574', GradientType=0);
     background-repeat: repeat-x;
   }
 
@@ -96,6 +96,7 @@ a.button, button, input[type="submit"], .add-to-cart-button {
     background-image: -webkit-linear-gradient(top, #eeeeee, #aaaaaa);
     background-image: -o-linear-gradient(top, #eeeeee, #aaaaaa);
     background-image: linear-gradient(top, #eeeeee, aaaaaa);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
     border: 1px solid $lightGrey;
 
     &:hover {
@@ -105,6 +106,7 @@ a.button, button, input[type="submit"], .add-to-cart-button {
       background-image: -webkit-linear-gradient(top, #efefef, #bcbcbc);
       background-image: -o-linear-gradient(top, #efefef, #bcbcbc);
       background-image: linear-gradient(top, #efefef, bcbcbc);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#bcbcbc', GradientType=0);
       border: 1px solid darken($lightGrey, 5%);
     }
 
@@ -115,6 +117,7 @@ a.button, button, input[type="submit"], .add-to-cart-button {
       background-image: -webkit-linear-gradient(top, #eeeeee, #aaaaaa);
       background-image: -o-linear-gradient(top, #eeeeee, #aaaaaa);
       background-image: linear-gradient(top, #eeeeee, aaaaaa);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#aaaaaa', GradientType=0);
     }
   }
 }
