@@ -47,6 +47,8 @@ a.button, button, input[type="submit"], .add-to-cart-button {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+
     padding: 0;
     &:hover{
       text-decoration: underline;

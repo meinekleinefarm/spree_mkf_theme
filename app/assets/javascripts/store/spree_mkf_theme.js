@@ -1,7 +1,8 @@
 //= require store/respond
 //= require store/enquire
 $(function() {
-  $('input[type="radio"]').addClass('radio')
+  $('input[type="radio"]').addClass('radio');
+  $('input[type="checkbox"]').addClass('checkbox');
   enquire.register("screen and (min-width: 768px)", [{
     setup : function() {
       $('aside#sidebar').addClass('omega');

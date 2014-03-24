@@ -6,6 +6,20 @@
       margin-right: 4px;
       background-color: $beige;
     }
+
+    input.checkbox {
+      margin-right: 4px;
+    }
+  }
+
+  #checkout-link {
+    .push-forward {
+      font-size: 100%;
+    }
+  }
+
+  #clear_cart_link {
+    padding-top: 25px;
   }
 }
 
