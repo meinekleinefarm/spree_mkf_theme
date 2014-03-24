@@ -2,23 +2,20 @@
 //= require store/enquire
 $(function() {
   $('input[type="radio"]').addClass('radio')
-  enquire.register("screen and (max-width: 767px)", [{
+  enquire.register("screen and (min-width: 768px)", [{
     setup : function() {
-      $('#content').before($('aside#sidebar'));
+      $('aside#sidebar').addClass('omega');
     },
     match : function() {
-      $('#content').before($('aside#sidebar'));
-    }
-  }]).register("screen and (min-width: 768px)", [{
-    match : function() {
+      // Push main content after the sidebar
       $('#content').after($('aside#sidebar'));
+      $('aside#sidebar').addClass('omega');
     }
-  }]).register("screen and (min-width: 960px)", [{
+  }]).register("screen and (max-width: 767px)", [{
+    // Push main content before the sidebar
     match : function() {
-      $('#content').removeClass('omega');
-    },
-    unmatch : function() {
-      $('#content').addClass('omega');
+      $('#content').before($('aside#sidebar'));
+      $('aside#sidebar').addClass('omega');
     }
   }]).listen();
 });
