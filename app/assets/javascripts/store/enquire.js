@@ -1,4 +1,4 @@
-// enquire.js v1.5.4 - Awesome Media Queries in JavaScript
+// enquire.js v1.5.6 - Awesome Media Queries in JavaScript
 // Copyright (c) 2013 Nick Williams - http://wicky.nillia.ms/enquire.js
 // License: MIT (http://www.opensource.org/licenses/mit-license.php)
 
@@ -61,8 +61,8 @@ window.enquire = (function(matchMedia) {
         this.options = options;
 
         if(!options.deferSetup) {
-      this.setup();
-    }
+			this.setup();
+		}
     }
     QueryHandler.prototype = {
 
@@ -213,8 +213,8 @@ MediaQuery.prototype = {
      */
     match : function(e) {
         if(this.matched) {
-      return; //already on
-    }
+			return; //already on
+		}
 
         each(this.handlers, function(handler) {
             handler.on(e);
@@ -231,11 +231,11 @@ MediaQuery.prototype = {
      */
     unmatch : function(e) {
         if(!this.matched) {
-      return; //already off
+			return; //already off
         }
 
         each(this.handlers, function(handler){
-      handler.off(e);
+			handler.off(e);
         });
         this.matched = false;
     }
@@ -341,7 +341,7 @@ MediaQuery.prototype = {
             for(mediaQuery in queries) {
                 if(queries.hasOwnProperty(mediaQuery)) {
                     queries[mediaQuery].assess(e);
-        }
+				}
             }
             return this;
         },
@@ -357,17 +357,6 @@ MediaQuery.prototype = {
 
             timeout = timeout || 500;
 
-            // any browser that doesn't implement this
-            // will not have media query support
-            if(!window.addEventListener) {
-                return;
-            }
-
-            //prevent multiple event handlers
-            if(this.listening) {
-        return this;
-      }
-
             //creates closure for separate timed events
             function wireFire(event) {
                 var timer;
@@ -378,15 +367,24 @@ MediaQuery.prototype = {
                     timer = setTimeout(function() {
                         self.fire(e);
                     }, timeout);
-                });
+                }, false);
             }
 
-            //handle initial load then listen
-            self.fire();
-            wireFire('resize');
-            wireFire('orientationChange');
+            //prevent multiple event handlers
+            if(this.listening) {
+                return this;
+            }
 
+            // any browser that doesn't implement this
+            // will not have media query support
+            if(window.addEventListener) {
+                wireFire('resize');
+                wireFire('orientationChange');
+            }
+
+            self.fire();
             this.listening = true;
+
             return this;
         }
     };
