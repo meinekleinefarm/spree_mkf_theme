@@ -1,3 +1,4 @@
+//= require store/respond
 //= require store/enquire
 $(function() {
   $('input[type="radio"]').addClass('radio')
