@@ -46,8 +46,13 @@
               <td colspan="2" valign="bottom" height="120">
                 <strong>Lieferadresse:</strong><br />
                 <%= @order.shipping_address.full_name %><br />
-                <%= @order.shipping_address.address1 %><br />
-                <%- unless @order.shipping_address.address2.blank? -%><%= @order.shipping_address.address2%><br/><%- end -%>
+                <%- if !@order.shipping_address.try(:station_number).blank? %>
+                  Packstation <%= @order.shipping_address.station_number %><br />
+                  <%= @order.shipping_address.locker_number %><br />
+                <%- else %>
+                  <%= @order.shipping_address.address1 %><br />
+                  <%- if !@order.shipping_address.address2.blank? -%><%= @order.shipping_address.address2%><br/><%- end -%>
+                <%- end %>
                 <%= @order.shipping_address.zipcode %> <%= @order.shipping_address.city %><br />
               </td>
             </tr>
