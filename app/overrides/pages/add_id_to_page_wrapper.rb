@@ -9,7 +9,9 @@ Deface::Override.new(:virtual_path => 'spree/pages/show',
                      :insert_after => 'div#page',
                      :erb => '<%- content_for :sidebar do -%>
                       <div data-hook="homepage_sidebar_navigation">
-                        <%= render :partial => "spree/schweine/sidebar" %>
+                        <nav id="taxonomies" class="sidebar-item" data-hook>
+                          <%= render :partial => "spree/schweine/sidebar" %>
+                        </nav>
                       </div>
                     <%- end -%>'
 )

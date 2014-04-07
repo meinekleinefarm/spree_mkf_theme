@@ -1,10 +1,10 @@
-<nav id="taxonomies" class="sidebar-item">
-  <h6 class="taxonomy-root">Wurst</h6>
-  <ul class="taxons-list">
-    <li><%= link_to("Wurstüberblick", products_path) %></li>
-  </ul>
-</nav>
-<nav id="taxonomies" class="sidebar-item">
+<h6 class="taxonomy-root">Produkte</h6>
+<ul class="taxons-list">
+  <li><%= link_to("Wurstüberblick", products_path) %></li>
+  <%= taxons_tree(Spree::Taxon.find_by_name('Art'), @taxon, 3) %>
+</ul>
+
+<% if Spree::Schwein.count > 0 %>
   <h6 class="taxonomy-root">Schweine</h6>
   <ul class="taxons-list">
     <li><%= link_to("Alle Schweine", schweine_path) %></li>
@@ -16,31 +16,24 @@
       <%- end %>
     <% end %>
   </ul>
-</nav>
-
+<% end %>
 <% if Spree::Rind.count > 0 %>
-  <nav id="taxonomies" class="sidebar-item">
-    <h6 class="taxonomy-root">Rinder</h6>
-    <ul class="taxons-list">
-      <li><%= link_to("Alle Rinder", rinder_path) %></li>
-      <%- Spree::Rind.limit(5).order('created_at DESC').each do |rind| %>
-        <li><%=link_to rind.name, rind_path(rind.permalink)%></li>
-      <% end %>
-    </ul>
-  </nav>
+  <h6 class="taxonomy-root">Rinder</h6>
+  <ul class="taxons-list">
+    <li><%= link_to("Alle Rinder", rinder_path) %></li>
+    <%- Spree::Rind.limit(5).order('created_at DESC').each do |rind| %>
+      <li><%=link_to rind.name, rind_path(rind.permalink)%></li>
+    <% end %>
+  </ul>
 <% end %>
 
 <%- if defined?(SpreeEssentialBlog)  == 'constant' && Spree::Post.live.count > 0 %>
-  <nav id="taxonomies" class="sidebar-item">
-    <h6 class="taxonomy-root">Schweinenews</h6>
-    <% @blog = Spree::Blog.first %>
-    <%= render :partial => "spree/blogs/shared/archive", :locals => { :posts => @blog.posts.live.limit(5).order('posted_at DESC') } %>
-  </nav>
+  <h6 class="taxonomy-root">Schweinenews</h6>
+  <% @blog = Spree::Blog.first %>
+  <%= render :partial => "spree/blogs/shared/archive", :locals => { :posts => @blog.posts.live.limit(5).order('posted_at DESC') } %>
 <%- end -%>
 
 <%- if @bauern_menu = Spree::MenuBar.find_by_name("Bauern") %>
-  <nav id="taxonomies" class="sidebar-item">
-    <h6 class="taxonomy-root">Bauern</h6>
-    <%= render :partial => "spree/shared/render_menu", :locals => {:menu_bar => @bauern_menu} %>
-  </nav>
+  <h6 class="taxonomy-root">Bauern</h6>
+  <%= render :partial => "spree/shared/render_menu", :locals => {:menu_bar => @bauern_menu} %>
 <%- end -%>

@@ -6,8 +6,18 @@ ul.filter_choices, ul.taxons-list, ul#similar_items_by_taxon, ul.bauern-list {
 
   margin: 0 0 10px 5px;
 
-  li:before{
-    content:"\00BB\00A0";
+  ul {
+    margin: 0 0 0 10px;
+  }
+
+  li {
+    &:before{
+      content:"\00BB\00A0";
+    }
+
+    &.current > a {
+      text-decoration: underline !important;
+    }
   }
 }
 
