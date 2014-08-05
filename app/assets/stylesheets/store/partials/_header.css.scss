@@ -9,7 +9,7 @@ header {
   }
 
   .container {
-    padding: 10px;
+    padding: 5px;
   }
 
   #top-nav-bar {
@@ -19,7 +19,7 @@ header {
 ul#main-nav-bar {
   text-transform: none;
   border: 0px;
-  text-align: center;
+  text-align: left;
 
   li a, li#link-to-cart a{
     font-weight: normal;
@@ -35,6 +35,23 @@ ul#main-nav-bar {
       border-color: $grey;
       font-weight: normal;
       font-size: 14px;
+    }
+  }
+
+  li#link-to-triodos, li#link-to-paypal {
+    @media only screen {
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        float: right;
+        margin-right: 10px;
+
+        img {
+          margin-top: -5px;
+        }
+      }
     }
   }
 

@@ -3,7 +3,7 @@ de:
     formats:
       default: "%Y-%m-%d"
       pig: "%B %Y"
-  home: Shop-Startseite
+  home: Home
   taxon_placeholder: "Produktklasse hinzufügen"
   schweine: Schweine
   date_of_death: Geschlachtet
