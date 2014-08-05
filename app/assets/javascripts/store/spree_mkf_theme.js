@@ -3,22 +3,6 @@
 $(function() {
   $('input[type="radio"]').addClass('radio');
   $('input[type="checkbox"]').addClass('checkbox');
-  enquire.register("screen and (min-width: 768px)", [{
-    setup : function() {
-      $('aside#sidebar').addClass('omega');
-    },
-    match : function() {
-      // Push main content after the sidebar
-      $('#content').after($('aside#sidebar'));
-      $('aside#sidebar').addClass('omega');
-    }
-  }]).register("screen and (max-width: 767px)", [{
-    // Push main content before the sidebar
-    match : function() {
-      $('#content').before($('aside#sidebar'));
-      $('aside#sidebar').addClass('omega');
-    }
-  }]).listen();
 });
 
 $(document).ready(function() {
