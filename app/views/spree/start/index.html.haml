@@ -15,6 +15,8 @@
       Schweinenews
     = render :partial => 'spree/blogs/shared/preview', :collection => @blog.posts.live.limit(3).order('posted_at DESC'), :as => :post
 
+    = link_to 'Ältere Beiträge', blog_posts_path(@blog, page: 2)
+
 - content_for :teaser do
   .sixteen.columns.omega.teaser{style: 'margin-bottom: 10px'}
     =image_tag('store/teaser.jpg', style: 'width: 100%', alt: 'Die Wurst von meine kleine Farm ist Meat on a Mission: Denn wer auf anonymes Massenfleisch verzichtet und stattdessen nur ab und zu Fleisch mit Gesicht von glücklichen Schweinen kauft, der bringt gutes Karma -  für sich, die Tiere und den Rest der Welt.')
