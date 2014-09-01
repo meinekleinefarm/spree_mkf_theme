@@ -1,21 +1,22 @@
-%div{ 'data-hook' => "homepage_products" }
-  %h2
-    Schweine
-    %span.addition=link_to 'alle Schweine ...', schweine_path, style: 'font-size:50%;text-decoration:underline;padding-left: 3%'
-  %ul#schweine.inline.product-listing.row
-    = render :partial => 'spree/schweine/schwein', :collection => @schweine
-
-  %h2
-    Produkte
-    %span.addition=link_to 'alle Produkte ...', products_path, style: 'font-size:50%;text-decoration:underline;padding-left: 3%'
-  = render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon }
-
-  - if defined?(SpreeEssentialBlog)  == 'constant' && Spree::Post.live.count > 0
+- cache 'spree/start/index.html.haml', expires_in: 1.hour do
+  %div{ 'data-hook' => "homepage_products" }
     %h2
-      Schweinenews
-    = render :partial => 'spree/blogs/shared/preview', :collection => @blog.posts.live.limit(3).order('posted_at DESC'), :as => :post
+      Schweine
+      %span.addition=link_to 'alle Schweine ...', schweine_path, style: 'font-size:50%;text-decoration:underline;padding-left: 3%'
+    %ul#schweine.inline.product-listing.row
+      = render :partial => 'spree/schweine/schwein', :collection => @schweine
 
-    = link_to 'Ältere Beiträge', blog_posts_path(@blog, page: 2)
+    %h2
+      Produkte
+      %span.addition=link_to 'alle Produkte ...', products_path, style: 'font-size:50%;text-decoration:underline;padding-left: 3%'
+    = render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon }
+
+    - if defined?(SpreeEssentialBlog)  == 'constant' && Spree::Post.live.count > 0
+      %h2
+        Schweinenews
+      = render :partial => 'spree/blogs/shared/preview', :collection => @blog.posts.live.limit(3).order('posted_at DESC'), :as => :post
+
+      = link_to 'Ältere Beiträge', blog_posts_path(@blog, page: 2)
 
 - content_for :teaser do
   .sixteen.columns.omega.teaser{style: 'margin-bottom: 10px'}
