@@ -17,7 +17,7 @@ $(document).ready(function() {
   $(".posts img").each(function() {
     // Let's put a caption if there is one
     $(this).wrap('<figure class="image"></figure>')
-    if($(this).attr("alt")) {
+    if($(this).attr("alt") && $(this).attr("alt") !== 'REPLACE-WITH-ALT') {
       $(this).after('<figcaption>' + $(this).attr("alt") + '</figcaption>');
     }
   });
