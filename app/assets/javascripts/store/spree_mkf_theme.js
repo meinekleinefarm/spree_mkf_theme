@@ -6,15 +6,7 @@ $(function() {
 });
 
 $(document).ready(function() {
-  $("#page img").each(function() {
-    // Let's put a caption if there is one
-    $(this).wrap('<figure class="image"></figure>')
-    if($(this).attr("alt")) {
-      $(this).after('<figcaption>' + $(this).attr("alt") + '</figcaption>');
-    }
-  });
-
-  $(".posts img").each(function() {
+  $("#page img, .posts img, .post img").each(function() {
     // Let's put a caption if there is one
     $(this).wrap('<figure class="image"></figure>')
     if($(this).attr("alt") && $(this).attr("alt") !== 'REPLACE-WITH-ALT') {
