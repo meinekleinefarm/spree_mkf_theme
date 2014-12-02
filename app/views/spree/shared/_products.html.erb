@@ -3,7 +3,10 @@
   paginated_products ||= products
 %>
 <% if products.empty? %>
-  <%= t(:no_products_found) %>
+  <h5>
+    Wurst und Fleisch von diesem Tier sind leider schon ausverkauft.
+  </h5>
+  <p>Aber im <%= link_to 'Wurstüberblick', products_path %> findest Du andere Leckereien!</p>
 <% elsif params.key?(:keywords) %>
   <h6 class="search-results-title"><%= t(:search_results, :keywords => h(params[:keywords])) %></h6>
 <% end %>
