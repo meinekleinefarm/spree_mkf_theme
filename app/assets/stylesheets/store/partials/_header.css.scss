@@ -38,7 +38,7 @@ ul#main-nav-bar {
     }
   }
 
-  li#link-to-triodos, li#link-to-paypal, li#link-to-sofort {
+  li#link-to-triodos, li#link-to-paypal, li#link-to-sofort, li#creditcard {
     @media only screen {
       @media (max-width: 767px) {
         display: none;
@@ -46,7 +46,7 @@ ul#main-nav-bar {
 
       @media (min-width: 768px) {
         float: right;
-        margin-right: 5px;
+        margin-right: 2px;
 
         img {
           margin-top: -5px;
