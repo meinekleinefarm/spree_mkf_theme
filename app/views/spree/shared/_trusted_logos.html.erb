@@ -1,10 +1,11 @@
 <li id="creditcard">
-  <a href="http://www.credit-card-logos.com" title="Bequem online bezahlen mit Kreditkarte" target="_blank"><img alt="Kreditkarten logo MasterCard, Visa" src="http://www.credit-card-logos.com/images/visa_mastercard_credit-card-logos/mc_vs_accpt_h_023_gif.gif" width="75" height="23" border="0" />
+  <a href="http://www.credit-card-logos.com" title="Bequem online bezahlen mit Kreditkarte" target="_blank">
+    <%= image_tag 'store/credit-card-logo.gif', alt: "Kreditkarten logo MasterCard, Visa", width: "75", height: "23", border: "0" %>
   </a>
 </li>
 <li id="link-to-sofort" title="Bequem online bezahlen mit  SOFORT Überweisung.">
   <%= link_to 'https://www.sofort.de/', target: '_blank' do %>
-    <%= image_tag 'store/sofort-logo.png', alt: "Triodos Bank Logo"%>
+    <%= image_tag 'store/sofort-logo.png', alt: "Triodos Bank Logo" %>
   <% end %>
 </li>
 <li id="link-to-paypal">
