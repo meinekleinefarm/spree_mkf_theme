@@ -1,4 +1,4 @@
 Deface::Override.new(:virtual_path => 'spree/orders/edit',
                      :name => 'add_delivery_costs_to_cart',
                      :insert_before => '[data-hook="outside_cart_form"]',
-                     :erb => "<p>Ab einem Warenwert von 50€ versenden wir innerhalb Deutschlands kostenfrei. Kühlware ist ab 90€ Gesamtbestellwert kostenlos.</p>")
+                     :erb => "<p>Über die Versandkosten verdienen wir kein Geld. Wir berechnen lediglich die Kosten für Porto, Karton und Packpapier. Das sind <strong>4,50 &euro; bei regulärem Versand</strong> (ab 50 &euro; gratis) und <strong>7,90 &euro; für gekühlte Produkte</strong> (ab 90 &euro; gratis). Frischfleischversand ist teurer, da der Isolierkarton und die Kühlkissen entsprechend mehr kosten.</p>")
