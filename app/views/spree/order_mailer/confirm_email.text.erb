@@ -31,6 +31,9 @@ Bestellnummer <%=@order.number %>
 <%- end -%>
 <%= description_text%><%=price_text%>
 
+Für Bio-Ware gilt VO (EG) 834/2007 und VO (EG) 889/2008. DE-ÖKO-039.
+
+
 Zahlungsmethode:
 <%= @order.payments.first.try(:payment_method).try(:name) %>
 
