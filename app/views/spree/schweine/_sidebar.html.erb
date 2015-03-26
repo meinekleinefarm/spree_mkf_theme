@@ -1,7 +1,9 @@
 <h6 class="taxonomy-root">Produkte</h6>
 <ul class="taxons-list">
   <li><%= link_to("Wurstüberblick", products_path) %></li>
-  <%= taxons_tree(Spree::Taxon.find_by_name('Art'), @taxon, 3) %>
+  <% if root_taxon = Spree::Taxon.find_by_name('Art') %>
+    <%= taxons_tree(root_taxon, @taxon, 3) %>
+  <%- end %>
 </ul>
 
 <% if Spree::Schwein.count > 0 %>
