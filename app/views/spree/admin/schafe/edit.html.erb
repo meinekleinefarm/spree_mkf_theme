@@ -1,0 +1,17 @@
+<% content_for :page_actions do %>
+  <li><%= button_link_to t(:back_to_schafe_list), admin_schafe_url, :icon => 'icon-arrow-left' %></li>
+  <li id="new_schaf_link">
+    <%= button_link_to t(:new_schaf), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_schaf' } %>
+  </li>
+<% end %>
+
+<%= render 'spree/admin/shared/animal_sub_menu' %>
+<%= render :partial => 'spree/admin/shared/schafe_tabs', :locals => { :current => 'Schaf Details' } %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @schaf } %>
+
+<%= form_for [:admin, @schaf], :method => :put, :html => { :multipart => true } do |f| %>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+  </fieldset>
+<% end %>

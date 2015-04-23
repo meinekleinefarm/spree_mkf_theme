@@ -10,7 +10,7 @@
   <nav class="menu">
     <ul data-hook="admin_rind_tabs">
       <li<%== ' class="active"' if current == 'rind Details' %>>
-        <%= link_to_with_icon 'icon-edit', t(:rind_details), edit_admin_schwein_url(@rind) %>
+        <%= link_to_with_icon 'icon-edit', t(:rind_details), edit_admin_rind_url(@rind) %>
       </li>
       <li<%== ' class="active"' if current == 'Images' %>>
         <%= link_to_with_icon 'icon-picture', t(:images), admin_rind_images_url(@rind) %>

@@ -1,0 +1,25 @@
+<%= render 'spree/admin/shared/animal_sub_menu' %>
+<% content_for :page_title do %>
+  <%= t(:editing_schaf) %> &ldquo;<%= @schaf.name %>&rdquo;
+<% end %>
+
+<% content_for :page_actions do %>
+  <li><%= button_link_to t(:back_to_images), admin_schaf_images_path(@schaf), :icon => 'icon-arrow-left' %></li>
+<% end %>
+
+
+<%= form_for [:admin, @schaf, @image], :url => admin_schaf_images_path(@schaf, @image), :html => { :multipart => true } do |f| %>
+  <fieldset data-hook="new_image">
+    <legend align="center"><%= t(:new_image) %></legend>
+
+      <%= render :partial => 'spree/admin/schafe/images/form', :locals => { :f => f } %>
+
+      <div class="form-buttons filter-actions actions" data-hook="buttons">
+        <%= button t(:update), 'icon-refresh' %>
+        <span class="or"><%= t(:or) %></span>
+        <%= link_to_with_icon 'icon-remove', t(:cancel), admin_schaf_images_url(@schaf), :id => 'cancel_link', :class => 'button' %>
+      </div>
+  </fieldset>
+<% end %>
+
+<%= javascript_include_tag 'admin/images/new.js' %>

@@ -1,0 +1,86 @@
+<div data-hook="admin_schaf_form_fields">
+
+  <div class="left eight columns alpha" data-hook="admin_schaf_form_left">
+    <%= f.field_container :name do %>
+      <%= f.label :name, raw(t(:name) + content_tag(:span, ' *', :class => 'required')) %>
+      <%= f.text_field :name, :class => 'fullwidth title' %>
+      <%= f.error_message_on :name %>
+    <% end %>
+
+    <%= f.field_container :permalink do %>
+      <%= f.label :permalink, raw(t(:permalink) + content_tag(:span, ' *',  :class => "required")) %>
+      <%= f.text_field :permalink, :class => 'fullwidth title' %>
+      <%= f.error_message_on :permalink %>
+    <% end %>
+
+    <%= f.field_container :description do %>
+      <%= f.label :description, t(:description) %>
+      <%= f.text_area :description, {:rows => '20', :class => 'fullwidth'} %>
+      <%= f.error_message_on :description %>
+    <% end %>
+  </div>
+
+  <div class="right four columns omega" data-hook="admin_schaf_form_right">
+
+    <%= f.field_container :weight do %>
+      <%= f.label :weight, raw(t(:weight) + content_tag(:span, ' *', :class => "required")) %>
+      <%= f.text_field :weight, :value => @schaf.weight, :size => 25 %>
+      <%= f.error_message_on :weight %>
+    <% end %>
+
+    <div class="clear"></div>
+
+    <%= f.field_container :date_of_birth do %>
+      <%= f.label :date_of_birth, t(:date_of_birth) %>
+      <%= f.error_message_on :date_of_birth %>
+      <%= f.text_field :date_of_birth, :size => 25, :value => datepicker_field_value(@schaf.date_of_birth), :class => 'datepicker' %>
+    <% end %>
+
+    <div class="clear"></div>
+
+    <%= f.field_container :date_of_death do %>
+      <%= f.label :date_of_death, t(:date_of_death) %>
+      <%= f.error_message_on :date_of_death %>
+      <%= f.text_field :date_of_death, :size => 25, :value => datepicker_field_value(@schaf.date_of_death), :class => 'datepicker' %>
+    <% end %>
+
+    <div class="clear"></div>
+
+    <%= f.field_container :race do %>
+      <%= f.label :race, raw(t(:race)) %>
+      <%= f.text_field :race, :value => @schaf.race, :size => 25 %>
+      <%= f.error_message_on :race %>
+    <% end %>
+
+
+  </div>
+
+
+
+  <!-- <h2><%= t(:metadata) %></h2> -->
+  <div data-hook="admin_schaf_form_meta" class="alpha omega twelve columns">
+    <%= f.field_container :meta_keywords do %>
+      <%= f.label :meta_keywords, t(:meta_keywords) %>
+      <%= f.text_field :meta_keywords, :class => 'fullwidth' %>
+    <% end %>
+
+    <%= f.field_container :meta_description do %>
+      <%= f.label :meta_description, t(:meta_description) %>
+      <%= f.text_field :meta_description, :class => 'fullwidth' %>
+    <% end %>
+  </div>
+
+  <div class="clear"></div>
+
+  <div data-hook="admin_schaf_form_additional_fields"></div>
+
+  <div class="clear"></div>
+</div>
+
+<% unless Rails.env.test? %>
+  <script>
+  $("#schaf_option_type_ids").select2();
+
+  $('.select2-container').css({width: '20em'})
+  </script>
+<% end %>

@@ -1,11 +1,11 @@
 <%= render 'spree/admin/shared/animal_sub_menu' %>
-<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @rind } %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @schaf } %>
 
-<%= form_for [:admin, @rind], :html => { :multipart => true } do |f| %>
+<%= form_for [:admin, @schaf], :html => { :multipart => true } do |f| %>
 
-<fieldset data-hook="new_rind">
+<fieldset data-hook="new_schaf">
 
-  <legend align="center"><%= t(:new_rind) %></legend>
+  <legend align="center"><%= t(:new_schaf) %></legend>
 
   <%= f.field_container :name do %>
     <%= f.label :name, t(:name) %> <span class="required">*</span><br />
@@ -22,13 +22,13 @@
 //<![CDATA[
   (function($){
     var base_url = "<%= admin_prototypes_url %>";
-    var prototype_select = $('#rind_prototype_id');
+    var prototype_select = $('#schaf_prototype_id');
     prototype_select.change(function() {
       var id = prototype_select.val();
       if (id.length) {
-        $('#rind-from-prototype').load([ base_url, id ].join("/"));
+        $('#schaf-from-prototype').load([ base_url, id ].join("/"));
       } else {
-        $('#rind-from-prototype').empty();
+        $('#schaf-from-prototype').empty();
       }
     })
     if (prototype_select.html() == "") {
