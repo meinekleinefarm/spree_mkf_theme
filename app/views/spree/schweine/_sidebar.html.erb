@@ -9,7 +9,7 @@
 <% if Spree::Schwein.count > 0 %>
   <h6 class="taxonomy-root">Schweine</h6>
   <ul class="taxons-list" id="schweine">
-    <li><%= link_to("Alle ssd", schweine_path) %></li>
+    <li><%= link_to("Alle Schweine", schweine_path) %></li>
     <%- Spree::Schwein.where('name IS NOT NULL').where('permalink IS NOT NULL').limit(5).order('created_at DESC').each do |schwein| %>
       <%- if schwein.try(:permalink).blank? %>
         <li><%= schwein.name %></li>
