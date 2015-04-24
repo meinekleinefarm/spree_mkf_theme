@@ -1,0 +1,19 @@
+<div class="left">
+  <%= render_weight(@schaf, :units => {:unit => "kg", :thousand => "t"}).html_safe %>
+  |
+  <span class="weight">
+      <b>
+        Geboren:
+      </b>
+      <%= l(@schaf.date_of_birth, :format => :pig) %>
+  </span>
+  |
+  <span class="weight">
+      <b>
+        Geschlachtet:
+      </b>
+      <%= l(@schaf.date_of_death) %>
+  </span>
+</div>
+<div class="right"></div>
+<div class="clear"></div>

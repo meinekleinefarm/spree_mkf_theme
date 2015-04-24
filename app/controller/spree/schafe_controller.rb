@@ -10,7 +10,7 @@ class Spree::SchafeController < Spree::StoreController
   end
 
   def show
-    @rind = Spree::Schaf.find_by_permalink(params[:id])
+    @schaf = Spree::Schaf.find_by_permalink(params[:id])
   end
 
 end

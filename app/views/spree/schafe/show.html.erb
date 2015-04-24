@@ -1,0 +1,50 @@
+<div data-hook="product_show" itemscope itemtype="http://schema.org/Schaf">
+  <h1>
+    <%= @schaf.name %>
+  </h1>
+
+  <div class="p">
+    <%= render :partial => 'schafe_properties' %>
+  </div>
+
+  <% @body_id = 'schaf-details' %>
+
+  <div class="columns twelve alpha" data-hook="schaf_left_part">
+    <div class="row" data-hook="schaf_left_part_wrap">
+
+      <div id="product-images" data-hook="product_images">
+        <div id="main-image" data-hook class="columns eight alpha">
+          <%= render :partial => 'spree/schafe/image', :object => @schaf.images.first %>
+        </div>
+        <div id="thumbnails" data-hook class="columns four omega">
+          <%= render :partial => 'thumbnails' %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="columns twelve omega" data-hook="schaf_right_part">
+    <div class="row" data-hook="schaf_right_part_wrap">
+
+      <div id="schaf-description" data-hook="schaf_description">
+
+        <div itemprop="description" data-hook="description">
+          <%= product_description(@schaf) rescue t(:schaf_has_no_description) %>
+        </div>
+
+        <h3>Produkte von diesem Schaf kaufen</h3>
+        <%- @variant_name = @schaf.name %>
+        <%= render :partial => 'spree/shared/products', :locals => { :products => @schaf.products } %>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/shared/taxonomies' %>
+  </div>
+<% end %>

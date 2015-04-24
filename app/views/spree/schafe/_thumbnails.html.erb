@@ -1,0 +1,10 @@
+<%# no need for thumbnails unless there is more than one image %>
+<% if @schaf.images.size > 1 %>
+  <ul id="product-thumbnails" class="thumbnails inline" data-hook>
+    <% @schaf.images.each do |i| %>
+      <li class='tmb-all' id='tmb-<%= i.id %>'>
+        <%= link_to(image_tag(i.attachment.url(:mini), size: '100x100', alt: i.alt), i.attachment.url(:product), :class => 'tmb-all', :id => "tmb-#{i.id}") %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
